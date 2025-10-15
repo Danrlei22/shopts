@@ -1,0 +1,22 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: $font-size-base;
+  background-color: $color-background;
+  -webkit-font-smothing: antialiased;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
