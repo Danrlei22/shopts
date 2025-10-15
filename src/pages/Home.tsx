@@ -1,7 +1,9 @@
+import NavBar from "../components/NavBar/NavBar";
+
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Pagina inicial - ShopTS</h1>
+      <NavBar />
     </div>
   );
 };
