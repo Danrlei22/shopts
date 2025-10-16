@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: $color-primary;
+  bottom: 0;
+  position: fixed;
+  padding: 10px;
+  text-align: center;
+  .footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    .contact-iconE,
+    .contact-iconW {
+      font-size: 30px;
+      margin-right: 5px;
+    }
+    &:hover .contact-iconE {
+      color: #fff;
+    }
+    &:hover .contact-iconW {
+      color: #25d366;
+    }
+  }
+  .footer-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.25em;
+    margin-top: 0.75;
+    margin-left: 1em;
+
+    .media-iconL,
+    .media-iconG {
+      font-size: 30px;
+      color: #fff;
+      margin-right: 10px;
+    }
+    &:hover .media-iconL {
+      color: #0a66c2;
+    }
+    &:hover .media-iconG {
+      color: #181717;
+    }
+  }
+  .footer-links {
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25em;
+    .footer-link {
+      color: #0000ff;
+      margin-left: 1em;
+    }
+    &:hover .footer-link {
+      text-decoration: underline;
+    }
+  }
+}
