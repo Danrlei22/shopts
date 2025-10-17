@@ -9,7 +9,8 @@ const Footer: React.FC = () => {
       <footer>
         <p>Contact: </p>
         <p className="footer-contact">
-          <MdOutlineEmail className="contact-iconE" /> danrlei_vieira@hotmail.com
+          <MdOutlineEmail className="contact-iconE" />{" "}
+          danrlei_vieira@hotmail.com
         </p>
         <p className="footer-contact">
           <FaWhatsapp className="contact-iconW" /> (45) 99999-9999
@@ -33,13 +34,13 @@ const Footer: React.FC = () => {
         <p>&copy; {new Date().getFullYear()} ShopTS. Developed by Danrlei.</p>
         <p>Version 1.0 - In development.</p>
         <div className="footer-links">
-          <Link to="/about" className="footer-link">
+          <Link to="/termofuse" className="footer-link">
             Terms of use
           </Link>
-          <Link to="/about" className="footer-link">
+          <Link to="/privacypolicy" className="footer-link">
             Privacy Policy
           </Link>
-          <Link to="/about" className="footer-link">
+          <Link to="/help" className="footer-link">
             Help
           </Link>
         </div>
