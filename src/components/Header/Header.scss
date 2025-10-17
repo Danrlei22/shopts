@@ -1,0 +1,40 @@
+@use "../../styles/variables" as *;
+
+header {
+  width: 100%;
+  height: 22em;
+  background-color: $color-terceary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //background-image: linear-gradient(to bottom,  $color-primary 80%, #f4f4f4);
+  .header-arrowB {
+    background-color: #fff;
+    display: flex;
+    width: 4em;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50px 50px 0;
+  }
+  .header-arrowF {
+    background-color: #fff;
+    display: flex;
+    width: 4em;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 0 0 50px;
+  }
+  .arrow-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .header-poster {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}

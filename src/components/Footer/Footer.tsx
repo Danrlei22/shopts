@@ -9,11 +9,16 @@ const Footer: React.FC = () => {
       <footer>
         <p>Contact: </p>
         <p className="footer-contact">
-          <MdOutlineEmail className="contact-iconE" />{" "}
+          <span>
+            <MdOutlineEmail className="contact-iconE" />
+          </span>
           danrlei_vieira@hotmail.com
         </p>
         <p className="footer-contact">
-          <FaWhatsapp className="contact-iconW" /> (45) 99999-9999
+          <span>
+            <FaWhatsapp className="contact-iconW" />
+          </span>
+          (45) 99999-9999
         </p>
         <div className="footer-media">
           <a
