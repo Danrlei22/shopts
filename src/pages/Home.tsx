@@ -1,14 +1,11 @@
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
-import NavBar from "../components/NavBar/NavBar";
+import Layout from "../components/Layout/Layout";
+import ProductGrid from "../components/ProductGrid/ProductGrid";
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <NavBar />
-      <Header />
-      <Footer />
-    </div>
+    <Layout>
+      <ProductGrid />
+    </Layout>
   );
 };
 
