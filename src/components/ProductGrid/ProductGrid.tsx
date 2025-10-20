@@ -1,8 +1,16 @@
+import "./ProductGrid.scss"
+
 const ProductGrid: React.FC = () => {
   return (
-    <>
-      <h1>Products list...</h1>
-    </>
+    <section className="section-container">
+      <div>
+        <h2>Offers of the day</h2>
+      </div>
+
+      <div className="container">
+
+      </div>
+    </section>
   );
 };
 

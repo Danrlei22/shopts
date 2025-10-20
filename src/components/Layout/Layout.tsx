@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import NavBar from "../NavBar/NavBar";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import "./Layout.scss"
 
 interface LayoutProps {
   children: ReactNode;
