@@ -2,6 +2,7 @@
 
 .nav-bar {
   width: 100%;
+  min-width: 340px;
   height: 6em;
   background-color: $color-primary;
   display: flex;
@@ -68,6 +69,21 @@
     }
     &:active .cart-icon {
       transform: scale(0.9);
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    padding: 1em 0;
+    gap: 1em;
+    .search-form {
+      width: 90%;
+      input {
+        width: 100%;
+        font-size: 14px;
+        padding-right: 0;
+        padding-left: 5px;
+      }
     }
   }
 }

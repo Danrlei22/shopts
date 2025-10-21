@@ -7,7 +7,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //background-image: linear-gradient(to bottom,  $color-primary 80%, #f4f4f4);
+  background-image: linear-gradient(to bottom,  $color-primary 80%, #f4f4f4);
   .header-arrowB {
     background-color: #fff;
     display: flex;
@@ -30,6 +30,9 @@ header {
     width: 25px;
     height: 25px;
     cursor: pointer;
+    &:active {
+      transform: scale(0.8);
+    }
   }
   .header-poster {
     display: flex;

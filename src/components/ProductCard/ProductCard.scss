@@ -36,13 +36,20 @@
       padding: 3px;
       border-radius: 5px;
       cursor: pointer;
+      &:active {
+        transform: scale(0.9);
+      }
     }
+
     .btn-buy {
       background-color: rgb(90, 200, 90);
       border: solid 2px green;
       padding: 3px;
       border-radius: 5px;
       cursor: pointer;
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
 }

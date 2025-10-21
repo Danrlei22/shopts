@@ -4,8 +4,10 @@
     min-height: 100vh;
   .main-content {
     flex-grow: 1;
+    width: auto;
     max-width: 1200px;
-    padding-bottom: 15em;
+    min-width: 340px;
+    padding-bottom: 5em;
     margin: 0 auto;
   }
 }
