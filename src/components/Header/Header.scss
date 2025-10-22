@@ -2,29 +2,41 @@
 
 header {
   width: 100%;
+  position: relative;
+  min-width: 340px;
   height: 22em;
   background-color: $color-terceary;
+  background-image: linear-gradient(to bottom, $color-primary 80%, #f4f4f4);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: linear-gradient(to bottom,  $color-primary 80%, #f4f4f4);
-  .header-arrowB {
+  justify-content: center;
+  .header-arrowB,
+  .header-arrowF {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s ease-in-out;
     background-color: #fff;
     display: flex;
     width: 4em;
     height: 4em;
     align-items: center;
     justify-content: center;
+    z-index: 10;
+  }
+  .header-arrowB {
+    left: 0;
     border-radius: 0 50px 50px 0;
   }
   .header-arrowF {
-    background-color: #fff;
-    display: flex;
-    width: 4em;
-    height: 4em;
-    align-items: center;
-    justify-content: center;
+    right: 0;
     border-radius: 50px 0 0 50px;
+  }
+  &:hover {
+    .header-arrowB,
+    .header-arrowF {
+      opacity: 1;
+    }
   }
   .arrow-icon {
     width: 25px;
@@ -36,8 +48,18 @@ header {
   }
   .header-poster {
     display: flex;
+    max-width: 1200px;
+    min-width: 340px;
+    justify-content: center;
     align-items: center;
-    margin-left: 1em;
-    margin-right: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .header-arrowB,
+    .header-arrowF {
+      opacity: 1;
+      width: 2.5em;
+      height: 2.5em;
+    }
   }
 }

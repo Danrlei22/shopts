@@ -3,21 +3,19 @@ import "./Header.scss";
 
 const Header: React.FC = () => {
   return (
-    <>
-      <header>
-        <div className="header-arrowB">
-          <MdArrowBackIosNew className="arrow-icon"/>
-        </div>
+    <header>
+      <div className="header-arrowB">
+        <MdArrowBackIosNew className="arrow-icon" />
+      </div>
 
-        <div className="header-poster">
-          <h1>Advertising/promotion/poster.</h1>
-        </div>
+      <div className="header-poster">
+        <h1>Advertising/promotion/poster.</h1>
+      </div>
 
-        <div className="header-arrowF">
-          <MdArrowForwardIos className="arrow-icon"/>
-        </div>
-      </header>
-    </>
+      <div className="header-arrowF">
+        <MdArrowForwardIos className="arrow-icon" />
+      </div>
+    </header>
   );
 };
 
