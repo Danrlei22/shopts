@@ -9,7 +9,7 @@ const Header: React.FC = () => {
       </div>
 
       <div className="header-poster">
-        <h1>Advertising/promotion/poster.</h1>
+        <h3>Advertising/promotion/poster.</h3>
       </div>
 
       <div className="header-arrowF">

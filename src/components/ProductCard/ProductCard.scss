@@ -2,7 +2,7 @@
 
 .product-card {
   width: 270px;
-  height: 300px;
+  height: 310px;
   border: solid 2px $color-secundary;
   .product-img {
     width: 100%;
@@ -25,6 +25,7 @@
     padding: 5px;
     font-weight: bold;
     font-size: 24px;
+    text-align: start;
   }
   .product-btn {
     display: flex;
