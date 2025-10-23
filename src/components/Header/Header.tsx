@@ -5,7 +5,7 @@ import bannerDelivery from "../../assets/images/Offer2.png";
 import bannerKitchen from "../../assets/images/Offer3.png";
 import bannerSmartwatch from "../../assets/images/Offer4.png";
 import bannerFone from "../../assets/images/Offer5.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const banners = [
   {
@@ -37,6 +37,16 @@ const banners = [
 
 const Header: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 5000);
+
+    return () => {
+      clearInterval(timerId);
+    };
+  }, []);
 
   return (
     <header>
