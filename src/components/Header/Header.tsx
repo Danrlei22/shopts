@@ -76,20 +76,36 @@ const Header: React.FC = () => {
     timerRef.current = startAutoplay(5000);
   };
 
+  const handleDotClick = (index: number) => {
+    setCurrentBannerIndex(index);
+
+    clearAutoplay();
+    timerRef.current = startAutoplay(5000);
+  };
+
   return (
     <header>
       <div className="header-arrowB">
-        <button className="btn-arrow" onClick={handleNextBanner}>
+        <button className="btn-arrow" onClick={handlePrevBanner}>
           <MdArrowBackIosNew className="arrow-icon" />
         </button>
       </div>
 
       <div className="header-poster">
         <img src={banners[currentBannerIndex].src} />
+        <div className="carousel-indicators">
+          {banners.map((banner, index) => (
+            <span
+              key={banner.id}
+              className={index === currentBannerIndex ? "active" : ""}
+              onClick={() => handleDotClick(index)}
+            ></span>
+          ))}
+        </div>
       </div>
 
       <div className="header-arrowF">
-        <button className="btn-arrow" onClick={handlePrevBanner}>
+        <button className="btn-arrow" onClick={handleNextBanner}>
           <MdArrowForwardIos className="arrow-icon" />
         </button>
       </div>

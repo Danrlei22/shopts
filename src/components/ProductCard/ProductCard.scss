@@ -3,11 +3,11 @@
 .product-card {
   width: 270px;
   height: 310px;
-  border: solid 2px $color-secundary;
+  border: solid 2px $color-secondary;
   .product-img {
     width: 100%;
     height: auto;
-    border-bottom: solid 1px $color-secundary;
+    border-bottom: solid 1px $color-secondary;
   }
   .product-name {
     display: flex;

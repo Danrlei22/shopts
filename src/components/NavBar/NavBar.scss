@@ -24,7 +24,7 @@
       padding-left: 15px;
       padding-right: 35px;
       font-size: 16px;
-      box-shadow: -5px 5px 5px $color-secundary;
+      box-shadow: -5px 5px 5px $color-secondary;
       border-right: 1px solid #424242;
     }
     .search-button {
@@ -38,10 +38,10 @@
       .search-icon {
         width: 40px;
         height: 25px;
-        color: $color-secundary;
+        color: $color-secondary;
       }
       &:hover .search-icon {
-        color: $color-terceary;
+        color: $color-tertiary;
       }
       &:active .search-icon {
         transform: scale(0.9);
