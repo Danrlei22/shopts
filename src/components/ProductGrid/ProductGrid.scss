@@ -19,6 +19,30 @@
     padding: 3px;
     border: solid 2px $color-secondary;
   }
+  .container-pagination {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
+    .btn-page {
+      background-color: $color-primary;
+      border: solid 1px $color-secondary;
+      color: $color-secondary;
+      padding: 0.5em 1em;
+      margin-left: 0.5em;
+      cursor: pointer;
+      font-weight: bold;
+      &:hover {
+        background-color: darken($color-primary, 20%);
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     .container {
       gap: 5px;
