@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# 🛍️ ShopTS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, focada em oferecer uma experiência fluida, acessível e interativa ao usuário.
 
-Currently, two official plugins are available:
+## 🔗 Links do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 [Netlify](https://shopts.netlify.app/)
 
-## React Compiler
+## 🚀 Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces de usuário reativas.
+- [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript com tipagem estática para maior segurança e previsibilidade no código.
+- [Vite](https://vitejs.dev/) - Ferramenta de build rápida e moderna para projetos front-end.
+- [Sass/SCSS](https://sass-lang.com/) - Pré-processador CSS utilizado para modularizar e organizar estilos.
+- [React-Router](https://reactrouter.com/) - Controle de rotas e navegação entre páginas.
+- [JSON-Server](https://github.com/typicode/json-server) - Backend simulado para mockar produtos e categorias.
+- [Netlify](https://www.netlify.com/) - Hospedagem e deploy contínuo do front-end.
 
-## Expanding the ESLint configuration
+## 💡 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🛒 Catálogo de produtos dinâmico com paginação
+- 🎞️ Carrossel automático de banners promocionais
+- 🔍 Filtro e organização por categorias
+- 📱 Layout totalmente responsivo
+- ⚙️ Estrutura modular e escalável
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalação
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Instalar dependências
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Rodar o projeto
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Objetivo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Desenvolver uma loja virtual **moderna, escalável e intuitiva**, utilizando **React + TypeScript**, aplicando **boas práticas de UI/UX, componentização, Redux Toolkit** para gerenciamento de estado e **design responsivo**, com foco em desempenho e manutenibilidade de código.
