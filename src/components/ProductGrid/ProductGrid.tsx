@@ -3,12 +3,21 @@ import type { Product } from "../../types/Product";
 
 import productsData from "../../data/products.json";
 import ProductCard from "../ProductCard/ProductCard";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "../../store";
+import { setPage } from "../../store/slices/paginationSlice";
 
 const ProductGrid: React.FC = () => {
   const products: Product[] = productsData as Product[];
-  const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8;
+
+  const currentPage = useSelector(
+    (state: RootState) => state.pagination.currentPage
+  );
+  const productsPerPage = useSelector(
+    (state: RootState) => state.pagination.productsPerPage
+  );
+  const dispatch = useDispatch<AppDispatch>();
+
   const totalPages = Math.ceil(products.length / productsPerPage);
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -20,7 +29,8 @@ const ProductGrid: React.FC = () => {
   );
 
   const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
+    dispatch(setPage(pageNumber));
+    window.scrollTo({ top: 500, behavior: "smooth" });
   };
 
   return (
@@ -32,7 +42,7 @@ const ProductGrid: React.FC = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-      
+
       <div className="container-pagination">
         {totalPages > 1 &&
           [...Array(totalPages)].map((_, index) => {
