@@ -6,6 +6,7 @@ import ProductCard from "../ProductCard/ProductCard";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "../../store";
 import { setPage } from "../../store/slices/paginationSlice";
+import { useRef } from "react";
 
 const ProductGrid: React.FC = () => {
   const products: Product[] = productsData as Product[];
@@ -23,6 +24,8 @@ const ProductGrid: React.FC = () => {
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
+  const gridRef = useRef<HTMLDivElement>(null);
+
   const currentProducts = products.slice(
     indexOfFirstProduct,
     indexOfLastProduct
@@ -30,11 +33,13 @@ const ProductGrid: React.FC = () => {
 
   const handlePageChange = (pageNumber: number) => {
     dispatch(setPage(pageNumber));
-    window.scrollTo({ top: 500, behavior: "smooth" });
+    if (gridRef.current) {
+      window.scrollTo({ top: gridRef.current.offsetTop, behavior: "smooth" });
+    }
   };
 
   return (
-    <section className="section-container">
+    <section className="section-container" ref={gridRef}>
       <h2>Offers of the day</h2>
 
       <div className="container">
