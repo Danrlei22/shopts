@@ -41,6 +41,11 @@
         background-color: #fff;
       }
     }
+    .btn-prev,
+    .btn-next {
+      font-weight: bold;
+      background-color: rgb(173, 173, 173);
+    }
   }
 
   @media (max-width: 768px) {

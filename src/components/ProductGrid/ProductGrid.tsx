@@ -7,6 +7,10 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "../../store";
 import { setPage } from "../../store/slices/paginationSlice";
 import { useRef } from "react";
+import {
+  MdKeyboardDoubleArrowLeft,
+  MdKeyboardDoubleArrowRight,
+} from "react-icons/md";
 
 const ProductGrid: React.FC = () => {
   const products: Product[] = productsData as Product[];
@@ -49,6 +53,14 @@ const ProductGrid: React.FC = () => {
       </div>
 
       <div className="container-pagination">
+        {currentPage > 1 && (
+          <button
+            className="btn-page btn-prev"
+            onClick={() => handlePageChange(currentPage - 1)}
+          >
+            <MdKeyboardDoubleArrowLeft />
+          </button>
+        )}
         {totalPages > 1 &&
           [...Array(totalPages)].map((_, index) => {
             const pageNumber = index + 1;
@@ -64,6 +76,14 @@ const ProductGrid: React.FC = () => {
               </button>
             );
           })}
+        {currentPage < totalPages && (
+          <button
+            className="btn-page btn-next"
+            onClick={() => handlePageChange(currentPage + 1)}
+          >
+            <MdKeyboardDoubleArrowRight />
+          </button>
+        )}
       </div>
     </section>
   );
