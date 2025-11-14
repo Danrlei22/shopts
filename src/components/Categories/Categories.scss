@@ -1,0 +1,13 @@
+section {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  .container-h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .section-h2 {
+      font-size: 2em;
+    }
+  }
+}

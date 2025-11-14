@@ -1,8 +1,12 @@
+import "./Categories.scss"
+
 const Categories: React.FC = () => {
   return (
-    <>
-      <h1>Category list...</h1>
-    </>
+    <section>
+      <div className="container-h2">
+        <h2 className="section-h2">Categories</h2>
+      </div>
+    </section>
   );
 };
 
