@@ -1,5 +1,8 @@
 import "./Categories.scss";
 import categoriesData from "../../data/categories.json";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from "../../store";
+import { setActiveCategory } from "../../store/slices/activeCategoryId";
 
 interface Category {
   id: number;
@@ -8,6 +11,16 @@ interface Category {
 
 const Categories: React.FC = () => {
   const categories: Category[] = categoriesData as Category[];
+  const activeCategoryId = useSelector(
+    (state: RootState) => state.activeCategory.activeCategoryId
+  );
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleCategoryClick = (categoryId: number) => {
+    dispatch(setActiveCategory(categoryId));
+  };
+
   return (
     <section>
       <div className="container-h2">
@@ -15,9 +28,15 @@ const Categories: React.FC = () => {
       </div>
 
       <div className="categories-container">
-        {categories.map((categories) => (
-          <button key={categories.id} className="btn-category">
-            {categories.name}
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            className={`btn-category ${
+              category.id === activeCategoryId ? "active" : ""
+            }`}
+            onClick={() => handleCategoryClick(category.id)}
+          >
+            {category.name}
           </button>
         ))}
       </div>

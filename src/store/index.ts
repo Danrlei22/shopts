@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import paginationReducer from "./slices/paginationSlice";
+import activeCategoryIdReducer from "./slices/activeCategoryId";
 
 export const store = configureStore({
   reducer: {
     pagination: paginationReducer,
+    activeCategory: activeCategoryIdReducer,
   },
 });
 
