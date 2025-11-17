@@ -3,6 +3,7 @@ import categoriesData from "../../data/categories.json";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../../store";
 import { setActiveCategory } from "../../store/slices/activeCategoryId";
+import { useState } from "react";
 
 interface Category {
   id: number;
@@ -17,8 +18,24 @@ const Categories: React.FC = () => {
 
   const dispatch = useDispatch<AppDispatch>();
 
+  const [visibleCategories, setVisibleCategories] = useState(15);
+  const categoriesToShow = categories.slice(0, visibleCategories);
+  const initialVisible = 15;
+
   const handleCategoryClick = (categoryId: number) => {
     dispatch(setActiveCategory(categoryId));
+  };
+
+  const handleLoadMore = () => {
+    {
+      setVisibleCategories((prevCount) => prevCount + 10);
+    }
+  };
+
+  const handleLoadLess = () => {
+    {
+      setVisibleCategories(initialVisible);
+    }
   };
 
   return (
@@ -28,7 +45,7 @@ const Categories: React.FC = () => {
       </div>
 
       <div className="categories-container">
-        {categories.map((category) => (
+        {categoriesToShow.map((category) => (
           <button
             key={category.id}
             className={`btn-category ${
@@ -39,6 +56,19 @@ const Categories: React.FC = () => {
             {category.name}
           </button>
         ))}
+      </div>
+      <div className="load">
+        {categoriesToShow.length < categories.length && (
+          <button className="btn-load" onClick={() => handleLoadMore()}>
+            Load More
+          </button>
+        )}
+        {visibleCategories >= categories.length &&
+          categories.length > initialVisible && (
+            <button className="btn-load" onClick={() => handleLoadLess()}>
+              Load Less
+            </button>
+          )}
       </div>
     </section>
   );
