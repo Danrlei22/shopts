@@ -55,44 +55,52 @@ const ProductGrid: React.FC = () => {
       <h2>Offers of the day</h2>
 
       <div className="container">
-        {currentProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {currentProducts.length > 0 ? (
+          currentProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : (
+          <h3 className="h3-noProduct">
+            We don't have a product in this category yet.
+          </h3>
+        )}
       </div>
 
-      <div className="container-pagination">
-        {currentPage > 1 && (
-          <button
-            className="btn-page btn-prev"
-            onClick={() => handlePageChange(currentPage - 1)}
-          >
-            <MdKeyboardDoubleArrowLeft />
-          </button>
-        )}
-        {totalPages > 1 &&
-          [...Array(totalPages)].map((_, index) => {
-            const pageNumber = index + 1;
-            return (
-              <button
-                key={pageNumber}
-                className={`btn-page ${
-                  pageNumber === currentPage ? "active" : ""
-                }`}
-                onClick={() => handlePageChange(pageNumber)}
-              >
-                {pageNumber}
-              </button>
-            );
-          })}
-        {currentPage < totalPages && (
-          <button
-            className="btn-page btn-next"
-            onClick={() => handlePageChange(currentPage + 1)}
-          >
-            <MdKeyboardDoubleArrowRight />
-          </button>
-        )}
-      </div>
+      {filteredProductsByCategory.length > 0 && (
+        <div className="container-pagination">
+          {currentPage > 1 && (
+            <button
+              className="btn-page btn-prev"
+              onClick={() => handlePageChange(currentPage - 1)}
+            >
+              <MdKeyboardDoubleArrowLeft />
+            </button>
+          )}
+          {totalPages > 1 &&
+            [...Array(totalPages)].map((_, index) => {
+              const pageNumber = index + 1;
+              return (
+                <button
+                  key={pageNumber}
+                  className={`btn-page ${
+                    pageNumber === currentPage ? "active" : ""
+                  }`}
+                  onClick={() => handlePageChange(pageNumber)}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
+          {currentPage < totalPages && (
+            <button
+              className="btn-page btn-next"
+              onClick={() => handlePageChange(currentPage + 1)}
+            >
+              <MdKeyboardDoubleArrowRight />
+            </button>
+          )}
+        </div>
+      )}
     </section>
   );
 };
