@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../../store";
 import { setActiveCategory } from "../../store/slices/activeCategoryId";
 import { useState } from "react";
+import { setPage } from "../../store/slices/paginationSlice";
 
 interface Category {
   id: number;
@@ -23,7 +24,14 @@ const Categories: React.FC = () => {
   const initialVisible = 15;
 
   const handleCategoryClick = (categoryId: number) => {
-    dispatch(setActiveCategory(categoryId));
+    const currentActiveId = activeCategoryId;
+
+    if (currentActiveId === categoryId) {
+      dispatch(setActiveCategory(null));
+      dispatch(setPage(1));
+    } else {
+      dispatch(setActiveCategory(categoryId));
+    }
   };
 
   const handleLoadMore = () => {
