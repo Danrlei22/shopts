@@ -21,6 +21,10 @@ const ProductGrid: React.FC = () => {
   const productsPerPage = useSelector(
     (state: RootState) => state.pagination.productsPerPage
   );
+  const activeCategoryId = useSelector(
+    (state: RootState) => state.activeCategory.activeCategoryId
+  );
+
   const dispatch = useDispatch<AppDispatch>();
 
   const totalPages = Math.ceil(products.length / productsPerPage);
@@ -30,7 +34,11 @@ const ProductGrid: React.FC = () => {
 
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const currentProducts = products.slice(
+  const filteredProductsByCategory = activeCategoryId
+    ? products.filter((product) => product.categoryId === activeCategoryId)
+    : products;
+
+  const currentProducts = filteredProductsByCategory.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );

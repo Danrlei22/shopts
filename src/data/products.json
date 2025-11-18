@@ -4,7 +4,7 @@
     "name": "Notebook Dell Inspiron 15",
     "price": 3899.0,
     "description": "Intel Core i5, 8GB RAM, SSD 512GB, Windows 11.",
-    "category": "Tecnologia",
+    "categoryId": 8,
     "imageURL": "https://placehold.co/600x400?text=Notebook+Dell"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Mouse Gamer HyperX Pulsefire",
     "price": 199.0,
     "description": "16000 DPI, RGB customizável.",
-    "category": "Tecnologia",
+    "categoryId": 8,
     "imageURL": "https://placehold.co/600x400?text=Mouse+Gamer"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Headset Logitech G435",
     "price": 499.99,
     "description": "Leve, Bluetooth, som estéreo imersivo.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Teclado Mecânico Redragon Kumara",
     "price": 289.9,
     "description": "Switches Outemu Blue, iluminação RGB completa.",
-    "category": "Tecnologia",
+    "categoryId": 8,
     "imageURL": "https://placehold.co/600x400?text=Teclado+Redragon"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Caixa de Som JBL Flip 6",
     "price": 699.0,
     "description": "Bluetooth, à prova d’água e graves potentes.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=JBL+Flip+6"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Smartphone Samsung Galaxy A35",
     "price": 1599.0,
     "description": "128GB, 8GB RAM, câmera tripla, 5G.",
-    "category": "Tecnologia",
+    "categoryId": 5,
     "imageURL": "https://placehold.co/600x400?text=Galaxy+A35"
   },
   {
@@ -52,7 +52,7 @@
     "name": "Smartwatch Amazfit Bip U",
     "price": 429.0,
     "description": "Monitor de batimentos, sono e resistência à água.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=Amazfit+Bip+U"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Controle Xbox Series X",
     "price": 499.0,
     "description": "Design ergonômico, compatível com PC e Xbox.",
-    "category": "Tecnologia",
+    "categoryId": 22,
     "imageURL": "https://placehold.co/600x400?text=Controle+Xbox"
   },
   {
@@ -68,7 +68,7 @@
     "name": "Monitor LG Ultragear 27''",
     "price": 1599.0,
     "description": "144Hz, 1ms, painel IPS, ideal para gamers.",
-    "category": "Tecnologia",
+    "categoryId": 8,
     "imageURL": "https://placehold.co/600x400?text=Monitor+LG"
   },
   {
@@ -76,7 +76,7 @@
     "name": "Fone Bluetooth Xiaomi Redmi Buds 5",
     "price": 279.0,
     "description": "Cancelamento de ruído ativo, até 38h de bateria.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=Redmi+Buds+5"
   },
   {
@@ -84,7 +84,7 @@
     "name": "Camiseta Básica Branca",
     "price": 59.9,
     "description": "Tecido 100% algodão, confortável e leve.",
-    "category": "Moda e Estilo",
+    "categoryId": 4,
     "imageURL": "https://placehold.co/600x400?text=Camiseta+Branca"
   },
   {
@@ -92,7 +92,7 @@
     "name": "Tênis Adidas Run Falcon 3",
     "price": 349.9,
     "description": "Amortecimento leve e design moderno.",
-    "category": "Moda e Estilo",
+    "categoryId": 18,
     "imageURL": "https://placehold.co/600x400?text=Tênis+Adidas"
   },
   {
@@ -100,7 +100,7 @@
     "name": "Jaqueta Jeans Unissex",
     "price": 189.9,
     "description": "Corte moderno, ideal para o dia a dia.",
-    "category": "Moda e Estilo",
+    "categoryId": 4,
     "imageURL": "https://placehold.co/600x400?text=Jaqueta+Jeans"
   },
   {
@@ -108,7 +108,7 @@
     "name": "Boné Nike Sportswear",
     "price": 129.9,
     "description": "Fecho ajustável e tecido leve.",
-    "category": "Moda e Estilo",
+    "categoryId": 4,
     "imageURL": "https://placehold.co/600x400?text=Boné+Nike"
   },
   {
@@ -116,7 +116,7 @@
     "name": "Relógio Casio Vintage Dourado",
     "price": 239.0,
     "description": "Clássico, resistente e cheio de estilo.",
-    "category": "Moda e Estilo",
+    "categoryId": 19,
     "imageURL": "https://placehold.co/600x400?text=Casio+Vintage"
   },
   {
@@ -124,7 +124,7 @@
     "name": "Calça Jeans Skinny Azul",
     "price": 159.9,
     "description": "Modelagem justa e tecido stretch.",
-    "category": "Moda e Estilo",
+    "categoryId": 4,
     "imageURL": "https://placehold.co/600x400?text=Calça+Jeans"
   },
   {
@@ -132,7 +132,7 @@
     "name": "Air Fryer Mondial Family 4L",
     "price": 429.9,
     "description": "Frita sem óleo, fácil de limpar e com timer digital.",
-    "category": "Casa e Utilidades",
+    "categoryId": 7,
     "imageURL": "https://placehold.co/600x400?text=Air+Fryer"
   },
   {
@@ -140,7 +140,7 @@
     "name": "Liquidificador Philips Walita ProBlend",
     "price": 299.9,
     "description": "600W, jarra de 2L, lâminas de alta performance.",
-    "category": "Casa e Utilidades",
+    "categoryId": 7,
     "imageURL": "https://placehold.co/600x400?text=Liquidificador"
   },
   {
@@ -148,7 +148,7 @@
     "name": "Cafeteira Dolce Gusto Genio S Plus",
     "price": 649.0,
     "description": "Pressão de 15 bar, prepara cafés e bebidas quentes.",
-    "category": "Casa e Utilidades",
+    "categoryId": 7,
     "imageURL": "https://placehold.co/600x400?text=Cafeteira"
   },
   {
@@ -156,7 +156,7 @@
     "name": "Aspirador de Pó Electrolux PowerSpeed",
     "price": 499.0,
     "description": "Alta sucção, filtro HEPA e fácil de limpar.",
-    "category": "Casa e Utilidades",
+    "categoryId": 7,
     "imageURL": "https://placehold.co/600x400?text=Aspirador+Electrolux"
   },
   {
@@ -164,7 +164,7 @@
     "name": "Tapete Decorativo Geométrico 2x1,5m",
     "price": 239.9,
     "description": "Tecido macio e design moderno para sala.",
-    "category": "Casa e Utilidades",
+    "categoryId": 26,
     "imageURL": "https://placehold.co/600x400?text=Tapete+Geometrico"
   },
   {
@@ -172,7 +172,7 @@
     "name": "Luminária LED de Mesa USB",
     "price": 89.9,
     "description": "Ajustável, ideal para estudos e trabalho.",
-    "category": "Casa e Utilidades",
+    "categoryId": 26,
     "imageURL": "https://placehold.co/600x400?text=Luminaria+LED"
   },
   {
@@ -180,7 +180,7 @@
     "name": "Caixa Gamer Redragon GS520",
     "price": 299.0,
     "description": "Som estéreo com iluminação RGB e graves reforçados.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=Redragon+GS520"
   },
   {
@@ -188,7 +188,7 @@
     "name": "Tablet Samsung Galaxy Tab A9",
     "price": 1299.0,
     "description": "Tela de 10.5”, 64GB, ideal para estudos e lazer.",
-    "category": "Tecnologia",
+    "categoryId": 1,
     "imageURL": "https://placehold.co/600x400?text=Galaxy+Tab+A9"
   },
   {
@@ -196,7 +196,7 @@
     "name": "Smart TV LG 50'' 4K UHD",
     "price": 2499.0,
     "description": "WebOS, HDR10, controle por voz e Bluetooth.",
-    "category": "Tecnologia",
+    "categoryId": 2,
     "imageURL": "https://placehold.co/600x400?text=Smart+TV+LG"
   },
   {
@@ -204,7 +204,7 @@
     "name": "Console PlayStation 5 Slim",
     "price": 3999.0,
     "description": "SSD ultrarrápido, controle DualSense e gráficos 4K.",
-    "category": "Tecnologia",
+    "categoryId": 22,
     "imageURL": "https://placehold.co/600x400?text=PlayStation+5"
   },
   {
@@ -212,7 +212,7 @@
     "name": "Tênis Vans Old Skool Preto",
     "price": 349.0,
     "description": "Clássico, confortável e estiloso.",
-    "category": "Moda e Estilo",
+    "categoryId": 18,
     "imageURL": "https://placehold.co/600x400?text=Vans+Old+Skool"
   },
   {
@@ -220,7 +220,7 @@
     "name": "Chinelo Havaianas Top",
     "price": 39.9,
     "description": "Confortável, resistente e ideal para o dia a dia.",
-    "category": "Moda e Estilo",
+    "categoryId": 18,
     "imageURL": "https://placehold.co/600x400?text=Havaianas+Top"
   },
   {
@@ -228,7 +228,7 @@
     "name": "Pulseira de Couro Masculina",
     "price": 49.9,
     "description": "Ajustável e elegante para qualquer ocasião.",
-    "category": "Moda e Estilo",
+    "categoryId": 17,
     "imageURL": "https://placehold.co/600x400?text=Pulseira+Couro"
   },
   {
@@ -236,7 +236,7 @@
     "name": "Quadro Decorativo Minimalista 60x40cm",
     "price": 119.9,
     "description": "Ideal para sala, quarto ou escritório.",
-    "category": "Casa e Utilidades",
+    "categoryId": 26,
     "imageURL": "https://placehold.co/600x400?text=Quadro+Minimalista"
   }
 ]
