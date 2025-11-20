@@ -18,7 +18,7 @@
     background-color: #fff;
     padding: 3px;
     border: solid 2px $color-secondary;
-    .h3-noProduct{
+    .h3-noProduct {
       margin: 2em 0;
     }
   }
@@ -48,6 +48,11 @@
     .btn-next {
       font-weight: bold;
       background-color: rgb(173, 173, 173);
+    }
+    .pagination-ellipis {
+      align-self: top;
+      margin-left: 0.5em;
+      font-size: 1.1em;
     }
   }
 

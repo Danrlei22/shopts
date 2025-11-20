@@ -50,6 +50,31 @@ const ProductGrid: React.FC = () => {
     }
   };
 
+  const maxButtonsPagination = 3;
+
+  let startPage = currentPage - Math.floor(maxButtonsPagination / 2);
+
+  if (startPage < 1) {
+    startPage = 1;
+  }
+
+  let endPage = startPage + maxButtonsPagination - 1;
+
+  if (endPage > totalPages) {
+    endPage = totalPages;
+    startPage = endPage - maxButtonsPagination + 1;
+  }
+
+  if (startPage < 1) {
+    startPage = 1;
+  }
+
+  const pageNumbersToShow: number[] = [];
+
+  for (let x = startPage; x <= endPage; x++) {
+    pageNumbersToShow.push(x);
+  }
+
   return (
     <section className="section-container" ref={gridRef}>
       <h2>Offers of the day</h2>
@@ -68,36 +93,46 @@ const ProductGrid: React.FC = () => {
 
       {filteredProductsByCategory.length > 0 && (
         <div className="container-pagination">
-          {currentPage > 1 && (
-            <button
-              className="btn-page btn-prev"
-              onClick={() => handlePageChange(currentPage - 1)}
-            >
-              <MdKeyboardDoubleArrowLeft />
-            </button>
-          )}
-          {totalPages > 1 &&
-            [...Array(totalPages)].map((_, index) => {
-              const pageNumber = index + 1;
-              return (
+          {totalPages > 1 && (
+            <>
+              {currentPage > 1 && (
                 <button
-                  key={pageNumber}
-                  className={`btn-page ${
-                    pageNumber === currentPage ? "active" : ""
-                  }`}
-                  onClick={() => handlePageChange(pageNumber)}
+                  className="btn-page btn-prev"
+                  onClick={() => handlePageChange(currentPage - 1)}
                 >
-                  {pageNumber}
+                  <MdKeyboardDoubleArrowLeft />
                 </button>
-              );
-            })}
-          {currentPage < totalPages && (
-            <button
-              className="btn-page btn-next"
-              onClick={() => handlePageChange(currentPage + 1)}
-            >
-              <MdKeyboardDoubleArrowRight />
-            </button>
+              )}
+
+              {startPage > 1 && <span className="pagination-ellipis">...</span>}
+
+              {pageNumbersToShow.map((pageNumber) => {
+                return (
+                  <button
+                    key={pageNumber}
+                    className={`btn-page ${
+                      pageNumber === currentPage ? "active" : ""
+                    }`}
+                    onClick={() => handlePageChange(pageNumber)}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              })}
+
+              {endPage < totalPages && (
+                <span className="pagination-ellipis">...</span>
+              )}
+
+              {currentPage < totalPages && (
+                <button
+                  className="btn-page btn-next"
+                  onClick={() => handlePageChange(currentPage + 1)}
+                >
+                  <MdKeyboardDoubleArrowRight />
+                </button>
+              )}
+            </>
           )}
         </div>
       )}

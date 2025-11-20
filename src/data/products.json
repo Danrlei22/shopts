@@ -238,5 +238,69 @@
     "description": "Ideal para sala, quarto ou escritório.",
     "categoryId": 26,
     "imageURL": "https://placehold.co/600x400?text=Quadro+Minimalista"
+  },
+  {
+    "id": 31,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 32,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 33,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 34,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 35,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 36,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 37,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+  },
+  {
+    "id": 38,
+    "name": "Headset Logitech G435",
+    "price": 499.99,
+    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "categoryId": 1,
+    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
   }
 ]
