@@ -1,6 +1,6 @@
 import "./ProductGrid.scss";
 import type { Product } from "../../types/Product";
-
+import categoriasData from "../../data/categories.json";
 import productsData from "../../data/products.json";
 import ProductCard from "../ProductCard/ProductCard";
 import { useDispatch, useSelector } from "react-redux";
@@ -75,6 +75,10 @@ const ProductGrid: React.FC = () => {
     pageNumbersToShow.push(x);
   }
 
+  const activeCategoryObject = categoriasData.find(
+    (cat) => cat.id === activeCategoryId
+  );
+
   return (
     <section className="section-container" ref={gridRef}>
       <h2>Offers of the day</h2>
@@ -86,7 +90,11 @@ const ProductGrid: React.FC = () => {
           ))
         ) : (
           <h3 className="h3-noProduct">
-            We don't have a product in this category yet.
+            We don't have any products in this category yet,{" "}
+            {activeCategoryObject?.name && (
+              <strong>{activeCategoryObject?.name}</strong>
+            )}
+            .
           </h3>
         )}
       </div>
