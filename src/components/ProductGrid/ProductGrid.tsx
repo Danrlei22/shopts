@@ -27,21 +27,23 @@ const ProductGrid: React.FC = () => {
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
-
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-
-  const gridRef = useRef<HTMLDivElement>(null);
-
   const filteredProductsByCategory = activeCategoryId
     ? products.filter((product) => product.categoryId === activeCategoryId)
     : products;
+
+  const totalPages = Math.ceil(
+    filteredProductsByCategory.length / productsPerPage
+  );
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
   const currentProducts = filteredProductsByCategory.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
+
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const handlePageChange = (pageNumber: number) => {
     dispatch(setPage(pageNumber));
@@ -51,22 +53,13 @@ const ProductGrid: React.FC = () => {
   };
 
   const maxButtonsPagination = 3;
-
-  let startPage = currentPage - Math.floor(maxButtonsPagination / 2);
-
-  if (startPage < 1) {
-    startPage = 1;
-  }
-
+  const pageOffset = Math.floor(maxButtonsPagination / 2);
+  let startPage = Math.max(1, currentPage - pageOffset);
   let endPage = startPage + maxButtonsPagination - 1;
 
   if (endPage > totalPages) {
     endPage = totalPages;
-    startPage = endPage - maxButtonsPagination + 1;
-  }
-
-  if (startPage < 1) {
-    startPage = 1;
+    startPage = Math.max(1, totalPages - maxButtonsPagination + 1);
   }
 
   const pageNumbersToShow: number[] = [];
@@ -99,48 +92,44 @@ const ProductGrid: React.FC = () => {
         )}
       </div>
 
-      {filteredProductsByCategory.length > 0 && (
+      {totalPages > 1 && (
         <div className="container-pagination">
-          {totalPages > 1 && (
-            <>
-              {currentPage > 1 && (
-                <button
-                  className="btn-page btn-prev"
-                  onClick={() => handlePageChange(currentPage - 1)}
-                >
-                  <MdKeyboardDoubleArrowLeft />
-                </button>
-              )}
+          {currentPage > 1 && (
+            <button
+              className="btn-page btn-prev"
+              onClick={() => handlePageChange(currentPage - 1)}
+            >
+              <MdKeyboardDoubleArrowLeft />
+            </button>
+          )}
 
-              {startPage > 1 && <span className="pagination-ellipis">...</span>}
+          {startPage > 1 && <span className="pagination-ellipis">...</span>}
 
-              {pageNumbersToShow.map((pageNumber) => {
-                return (
-                  <button
-                    key={pageNumber}
-                    className={`btn-page ${
-                      pageNumber === currentPage ? "active" : ""
-                    }`}
-                    onClick={() => handlePageChange(pageNumber)}
-                  >
-                    {pageNumber}
-                  </button>
-                );
-              })}
+          {pageNumbersToShow.map((pageNumber) => {
+            return (
+              <button
+                key={pageNumber}
+                className={`btn-page ${
+                  pageNumber === currentPage ? "active" : ""
+                }`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </button>
+            );
+          })}
 
-              {endPage < totalPages && (
-                <span className="pagination-ellipis">...</span>
-              )}
+          {endPage < totalPages && (
+            <span className="pagination-ellipis">...</span>
+          )}
 
-              {currentPage < totalPages && (
-                <button
-                  className="btn-page btn-next"
-                  onClick={() => handlePageChange(currentPage + 1)}
-                >
-                  <MdKeyboardDoubleArrowRight />
-                </button>
-              )}
-            </>
+          {currentPage < totalPages && (
+            <button
+              className="btn-page btn-next"
+              onClick={() => handlePageChange(currentPage + 1)}
+            >
+              <MdKeyboardDoubleArrowRight />
+            </button>
           )}
         </div>
       )}
