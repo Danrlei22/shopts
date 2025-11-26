@@ -82,12 +82,9 @@ const ProductGrid: React.FC = () => {
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <h3 className="h3-noProduct">
+          <h3 className="h3-noProduct" key={activeCategoryId || "no-category"}>
             We don't have any products in this category yet,{" "}
-            {activeCategoryObject?.name && (
-              <strong>{activeCategoryObject?.name}</strong>
-            )}
-            .
+            <strong>{activeCategoryObject?.name}</strong>.
           </h3>
         )}
       </div>
