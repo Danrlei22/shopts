@@ -7,7 +7,9 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer>
-        <p>Contact: </p>
+        <p>
+          <strong>Contact:</strong>{" "}
+        </p>
         <p className="footer-contact">
           <span>
             <MdOutlineEmail className="contact-iconE" />
@@ -36,7 +38,10 @@ const Footer: React.FC = () => {
             <FaGithub className="media-iconG" />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} ShopTS. Developed by Danrlei.</p>
+        <p>
+          &copy; {new Date().getFullYear()} ShopTS. Developed by{" "}
+          <strong>Danrlei</strong>.
+        </p>
         <p>Version 1.0 - In development.</p>
         <div className="footer-links">
           <Link to="/termofuse" className="footer-link">

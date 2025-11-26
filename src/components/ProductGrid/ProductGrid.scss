@@ -17,7 +17,8 @@
     gap: 15px;
     background-color: #fff;
     padding: 3px;
-    border: solid 2px $color-secondary;
+    border-top: solid 2px $color-secondary;
+    border-bottom: solid 2px $color-secondary;
     .h3-noProduct {
       margin: 2em 0;
       font-weight: normal;

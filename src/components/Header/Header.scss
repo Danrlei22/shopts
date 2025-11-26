@@ -104,17 +104,16 @@ header {
       border-radius: 20px;
       justify-content: center;
       align-items: center;
-      border: solid 2px #FFF;
+      border: solid 1px #FFF;
       span {
-        width: 10px;
-        height: 10px;
+        width: 25px;
+        height: 2px;
         margin: 0 5px;
-        border-radius: 50%;
         cursor: pointer;
         background-color: #fff;
         &.active {
-          width: 15px;
-          height: 15px;
+          width: 25px;
+          height: 4px;
           background-color: $color-tertiary;
         }
       }
