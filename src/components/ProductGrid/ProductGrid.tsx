@@ -24,21 +24,31 @@ const ProductGrid: React.FC = () => {
   const activeCategoryId = useSelector(
     (state: RootState) => state.activeCategory.activeCategoryId
   );
+  const searchTerm = useSelector(
+    (state: RootState) => state.searchFilter.searchByProducts
+  );
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const filteredProductsByCategory = activeCategoryId
-    ? products.filter((product) => product.categoryId === activeCategoryId)
-    : products;
+  const lowerCaseSearchTerm = searchTerm.toLowerCase();
+  let filteredProducts = products;
 
-  const totalPages = Math.ceil(
-    filteredProductsByCategory.length / productsPerPage
-  );
+  if (lowerCaseSearchTerm !== "") {
+    filteredProducts = filteredProducts.filter((product) =>
+      product.name.toLowerCase().includes(lowerCaseSearchTerm)
+    );
+  } else if (activeCategoryId) {
+    filteredProducts = products.filter(
+      (product) => product.categoryId === activeCategoryId
+    );
+  }
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
 
-  const currentProducts = filteredProductsByCategory.slice(
+  const currentProducts = filteredProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
