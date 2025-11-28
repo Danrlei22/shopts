@@ -82,6 +82,16 @@ const ProductGrid: React.FC = () => {
     (cat) => cat.id === activeCategoryId
   );
 
+  let noProductsMessage = "";
+
+  if (searchTerm.trim() !== "") {
+    noProductsMessage = `No products found matching "${searchTerm}".`;
+  } else if (activeCategoryId && activeCategoryObject) {
+    noProductsMessage = `We don't have any products in this category yet, ${activeCategoryObject.name}.`;
+  } else {
+    noProductsMessage = "No products available.";
+  }
+
   return (
     <section className="section-container" ref={gridRef}>
       <h2>Offers of the day</h2>
@@ -92,9 +102,11 @@ const ProductGrid: React.FC = () => {
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <h3 className="h3-noProduct" key={activeCategoryId || "no-category"}>
-            We don't have any products in this category yet,{" "}
-            <strong>{activeCategoryObject?.name}</strong>.
+          <h3
+            className="h3-noProduct"
+            key={activeCategoryId || activeCategoryId || "no-category"}
+          >
+            {noProductsMessage}
           </h3>
         )}
       </div>
