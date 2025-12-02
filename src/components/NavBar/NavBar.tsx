@@ -3,25 +3,26 @@ import "./NavBar.scss";
 import { BsCart } from "react-icons/bs";
 import marcaTS from "../../assets/marcaTS.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import type { AppDispatch } from "../../store";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "../../store";
 import { setSearchFilter } from "../../store/slices/searchFilter";
 import { setPage } from "../../store/slices/paginationSlice";
 import { clearActiveCategory } from "../../store/slices/activeCategoryId";
 
 const NavBar: React.FC = () => {
-  const [searchByProducts, setSearchByProducts] = useState("");
+  const searchTerm = useSelector(
+    (state: RootState) => state.searchFilter.searchByProducts
+  );
 
   const dispatch = useDispatch<AppDispatch>();
 
   const handleSearchProducts = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (searchByProducts.trim() === "") return;
+    if (searchTerm.trim() === "") return;
 
     dispatch(clearActiveCategory());
-    dispatch(setSearchFilter(searchByProducts));
+    dispatch(setSearchFilter(searchTerm));
     dispatch(setPage(1));
   };
 
@@ -37,8 +38,8 @@ const NavBar: React.FC = () => {
           type="text"
           placeholder="Search"
           name="search"
-          value={searchByProducts}
-          onChange={(e) => setSearchByProducts(e.target.value)}
+          value={searchTerm}
+          onChange={(e) => dispatch(setSearchFilter(e.target.value))}
         />
         <button type="submit" className="search-button">
           <FaMagnifyingGlass className="search-icon" />
