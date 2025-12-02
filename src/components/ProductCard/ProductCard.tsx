@@ -34,7 +34,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </p>
       <div className="product-btn">
         <button className="btn-buy">Buy</button>
-        <button className="btn-cart" type="button" onClick={handleAddProductToCart}>
+        <button
+          className="btn-cart"
+          type="button"
+          onClick={handleAddProductToCart}
+        >
           Add <BsCart />
         </button>
       </div>
