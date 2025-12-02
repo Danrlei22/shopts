@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import paginationReducer from "./slices/paginationSlice";
 import activeCategoryIdReducer from "./slices/activeCategoryId";
 import searchFilterReducer from "./slices/searchFilter";
+import cartReducer from "./slices/cartSlice";
 
 export const store = configureStore({
   reducer: {
     pagination: paginationReducer,
     activeCategory: activeCategoryIdReducer,
     searchFilter: searchFilterReducer,
+    cart: cartReducer,
   },
 });
 

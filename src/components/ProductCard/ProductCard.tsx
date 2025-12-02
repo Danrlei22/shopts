@@ -1,12 +1,21 @@
 import "./ProductCard.scss";
 import type { Product } from "../../types/Product";
 import { BsCart } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../../store";
+import { addItem } from "../../store/slices/cartSlice";
 
 interface ProductCardProps {
   product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const dispatch = useDispatch<AppDispatch>();
+
+  const handleAddProductToCart = () => {
+    dispatch(addItem(product));
+  };
+
   return (
     <div className="product-card">
       <img
@@ -25,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </p>
       <div className="product-btn">
         <button className="btn-buy">Buy</button>
-        <button className="btn-cart">
+        <button className="btn-cart" type="button" onClick={handleAddProductToCart}>
           Add <BsCart />
         </button>
       </div>

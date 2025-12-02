@@ -13,6 +13,7 @@ const NavBar: React.FC = () => {
   const searchTerm = useSelector(
     (state: RootState) => state.searchFilter.searchByProducts
   );
+  const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -48,6 +49,9 @@ const NavBar: React.FC = () => {
       <div>
         <button type="button" className="cart-button">
           <BsCart className="cart-icon" />
+          {cartItems.length > 0 && (
+            <span className="cart-quantity">{cartItems.length}</span>
+          )}
         </button>
       </div>
     </nav>
