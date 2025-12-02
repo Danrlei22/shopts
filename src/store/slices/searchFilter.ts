@@ -15,9 +15,12 @@ export const searchFilterSlice = createSlice({
     setSearchFilter: (state, action: PayloadAction<string>) => {
       state.searchByProducts = action.payload;
     },
+    clearSearchTerm: (state) => {
+      state.searchByProducts = "";
+    },
   },
 });
 
-export const { setSearchFilter } = searchFilterSlice.actions;
+export const { setSearchFilter, clearSearchTerm } = searchFilterSlice.actions;
 
 export default searchFilterSlice.reducer;

@@ -5,6 +5,7 @@ import type { AppDispatch, RootState } from "../../store";
 import { setActiveCategory } from "../../store/slices/activeCategoryId";
 import { useState } from "react";
 import { setPage } from "../../store/slices/paginationSlice";
+import { clearSearchTerm } from "../../store/slices/searchFilter";
 
 interface Category {
   id: number;
@@ -31,6 +32,8 @@ const Categories: React.FC = () => {
       dispatch(setPage(1));
     } else {
       dispatch(setActiveCategory(categoryId));
+      dispatch(clearSearchTerm());
+      dispatch(setPage(1));
     }
   };
 
