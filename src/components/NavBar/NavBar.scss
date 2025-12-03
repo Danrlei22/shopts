@@ -58,34 +58,37 @@
       transform: translateY(-50%);
     }
   }
-  .cart-button {
-    cursor: pointer;
-    background: none;
-    border: none;
+  .cart-container {
     position: relative;
-    .cart-icon {
-      width: 50px;
-      height: 40px;
-      color: #fff;
-    }
-    &:active .cart-icon {
-      transform: scale(0.9);
-    }
-    .cart-quantity {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 8px;
-      right: 13px;
-      background-color: red;
-      border-radius: 50%;
-      color: #fff;
-      padding: 2px 5px;
-      font-size: 14px;
-      font-weight: bold;
-      width: 20px;
-      height: 20px;
+    .cart-button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      position: relative;
+      .cart-icon {
+        width: 50px;
+        height: 40px;
+        color: #fff;
+      }
+      &:active .cart-icon {
+        transform: scale(0.9);
+      }
+      .cart-quantity {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 8px;
+        right: 13px;
+        background-color: red;
+        border-radius: 50%;
+        color: #fff;
+        padding: 2px 5px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 20px;
+        height: 20px;
+      }
     }
     .cart-dropdown {
       position: absolute;
@@ -110,6 +113,7 @@
         max-height: 800px;
         overflow-y: auto;
         .cart-title {
+          text-align: center;
           font-size: 22px;
           font-weight: bold;
           margin-bottom: 15px;
@@ -142,6 +146,7 @@
               .item-details {
                 display: flex;
                 flex-direction: column;
+                text-align: center;
                 .item-name {
                   font-weight: bold;
                   margin-bottom: 20px;
@@ -172,6 +177,7 @@
       }
     }
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     height: auto;

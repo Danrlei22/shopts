@@ -52,49 +52,49 @@ const NavBar: React.FC = () => {
           <FaMagnifyingGlass className="search-icon" />
         </button>
       </form>
-      <div>
+      <div className="cart-container">
         <button type="button" className="cart-button" onClick={toggleCartClick}>
           <BsCart className="cart-icon" />
           {cartItems.length > 0 && (
             <span className="cart-quantity">{cartItems.length}</span>
           )}
-          {showCart && (
-            <div className="cart-dropdown">
-              {cartItems.length === 0 ? (
-                <p className="cart-empty">Your cart is empty</p>
-              ) : (
-                <div className="cart-items">
-                  <h2 className="cart-title">Shopping cart</h2>
-                  <ul>
-                    {cartItems.map((item) => (
-                      <li key={item.id}>
-                        <div className="container-cart-item">
-                          <div className="item-image">
-                            <img src={item.imageURL} alt="Image item" />
-                          </div>
-                          <div className="item-details">
-                            <p className="item-name">{item.name}</p>
-                            <p className="item-price">
-                              {item.price.toLocaleString("pt-BR", {
-                                style: "currency",
-                                currency: "BRL",
-                              })}
-                            </p>
-                            <p>Total: </p>
-                            <p className="item-total-price">PREÇO  TOTAL</p>
-                          </div>
-                          <div className="container-cart-quantity">
-                            <div className="item-quantity">{item.quantity}</div>
-                          </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          )}
         </button>
+        {showCart && (
+          <div className="cart-dropdown">
+            {cartItems.length === 0 ? (
+              <p className="cart-empty">Your cart is empty</p>
+            ) : (
+              <div className="cart-items">
+                <h2 className="cart-title">Shopping cart</h2>
+                <ul>
+                  {cartItems.map((item) => (
+                    <li key={item.id}>
+                      <div className="container-cart-item">
+                        <div className="item-image">
+                          <img src={item.imageURL} alt="Image item" />
+                        </div>
+                        <div className="item-details">
+                          <p className="item-name">{item.name}</p>
+                          <p className="item-price">
+                            {item.price.toLocaleString("pt-BR", {
+                              style: "currency",
+                              currency: "BRL",
+                            })}
+                          </p>
+                          <p>Total: </p>
+                          <p className="item-total-price">PREÇO TOTAL</p>
+                        </div>
+                        <div className="container-cart-quantity">
+                          <div className="item-quantity">{item.quantity}</div>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </nav>
   );
