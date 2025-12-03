@@ -91,7 +91,7 @@
       position: absolute;
       top: 60px;
       right: 0;
-      width: 280px;
+      width: 500px;
       height: auto;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -104,6 +104,71 @@
         color: #424242;
         font-weight: bold;
         padding: 10px;
+      }
+      .cart-items {
+        height: 500px;
+        max-height: 800px;
+        overflow-y: auto;
+        .cart-title {
+          font-size: 22px;
+          font-weight: bold;
+          margin-bottom: 15px;
+          border-bottom: 2px solid $color-primary;
+          padding-bottom: 5px;
+        }
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            padding: 10px 0;
+            border-bottom: 1px solid #a6a6a6;
+            font-size: 14px;
+            &:last-child {
+              border-bottom: none;
+            }
+            .container-cart-item {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              height: auto;
+              .item-image {
+                width: auto;
+                height: auto;
+                object-fit: cover;
+                border-radius: 5px;
+              }
+              .item-details {
+                display: flex;
+                flex-direction: column;
+                .item-name {
+                  font-weight: bold;
+                  margin-bottom: 20px;
+                }
+                .item-price {
+                  color: $color-primary;
+                  margin-bottom: 5px;
+                  font-weight: bold;
+                  font-size: 22px;
+                }
+              }
+              .container-cart-quantity {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .item-quantity {
+                  font-size: 14px;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+                  border: 1px solid $color-secondary;
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
