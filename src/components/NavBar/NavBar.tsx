@@ -8,12 +8,14 @@ import type { RootState, AppDispatch } from "../../store";
 import { setSearchFilter } from "../../store/slices/searchFilter";
 import { setPage } from "../../store/slices/paginationSlice";
 import { clearActiveCategory } from "../../store/slices/activeCategoryId";
+import { useState } from "react";
 
 const NavBar: React.FC = () => {
   const searchTerm = useSelector(
     (state: RootState) => state.searchFilter.searchByProducts
   );
   const cartItems = useSelector((state: RootState) => state.cart.items);
+  const [showCart, setShowCart] = useState(false);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -25,6 +27,10 @@ const NavBar: React.FC = () => {
     dispatch(clearActiveCategory());
     dispatch(setSearchFilter(searchTerm));
     dispatch(setPage(1));
+  };
+
+  const toggleCartClick = () => {
+    setShowCart(!showCart);
   };
 
   return (
@@ -47,10 +53,27 @@ const NavBar: React.FC = () => {
         </button>
       </form>
       <div>
-        <button type="button" className="cart-button">
+        <button type="button" className="cart-button" onClick={toggleCartClick}>
           <BsCart className="cart-icon" />
           {cartItems.length > 0 && (
             <span className="cart-quantity">{cartItems.length}</span>
+          )}
+          {showCart && (
+            <div className="cart-dropdown">
+              {cartItems.length === 0 ? (
+                <p className="cart-empty">Your cart is empty</p>
+              ) : (
+                <div className="cart-items">
+                  <ul>
+                    {cartItems.map((item) => (
+                      <li key={item.id}>
+                        {item.name} x {item.quantity}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           )}
         </button>
       </div>
