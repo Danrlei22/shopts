@@ -81,11 +81,18 @@ const NavBar: React.FC = () => {
                               currency: "BRL",
                             })}
                           </p>
-                          <p>Total: </p>
-                          <p className="item-total-price">PREÇO TOTAL</p>
+                          <p>
+                            <strong>Total: </strong>
+                          </p>
+                          <p className="item-total-price">Preço * Qts</p>
                         </div>
                         <div className="container-cart-quantity">
+                          <p>
+                            <strong>Qts</strong>
+                          </p>
+                          <span className="item-more-quantity">+</span>
                           <div className="item-quantity">{item.quantity}</div>
+                          <span className="item-less-quantity">-</span>
                         </div>
                       </div>
                     </li>

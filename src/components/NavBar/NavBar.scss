@@ -157,18 +157,37 @@
                   font-weight: bold;
                   font-size: 22px;
                 }
+                .item-total-price{
+                  color: red
+                }
               }
               .container-cart-quantity {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                gap: 10px;
+                gap: 3px;
                 .item-quantity {
                   font-size: 14px;
                   font-weight: bold;
-                  margin-bottom: 5px;
                   border: 1px solid $color-secondary;
                   padding: 5px 10px;
                   border-radius: 5px;
+                }
+                .item-more-quantity{
+                  background-color: green;
+                  color: #FFF;
+                  padding: 2px 6px;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  font-size: 14px;
+                }
+                .item-less-quantity{
+                  background-color: red;
+                  color: #FFF;
+                  padding: 2px 6px;
+                  border-radius: 50%;
+                  cursor: pointer;
+                  font-size: 14px;
                 }
               }
             }
