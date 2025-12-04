@@ -157,8 +157,8 @@
                   font-weight: bold;
                   font-size: 22px;
                 }
-                .item-total-price{
-                  color: red
+                .item-total-price {
+                  color: red;
                 }
               }
               .container-cart-quantity {
@@ -173,17 +173,17 @@
                   padding: 5px 10px;
                   border-radius: 5px;
                 }
-                .item-more-quantity{
+                .item-more-quantity {
                   background-color: green;
-                  color: #FFF;
+                  color: #fff;
                   padding: 2px 6px;
                   border-radius: 50%;
                   cursor: pointer;
                   font-size: 14px;
                 }
-                .item-less-quantity{
+                .item-less-quantity {
                   background-color: red;
-                  color: #FFF;
+                  color: #fff;
                   padding: 2px 6px;
                   border-radius: 50%;
                   cursor: pointer;
@@ -209,6 +209,44 @@
         font-size: 14px;
         padding-right: 0;
         padding-left: 5px;
+      }
+    }
+    .cart-container {
+      .cart-dropdown {
+        right: -120px;
+        width: 300px;
+        .cart-items {
+          ul {
+            li {
+              .container-cart-item {
+                .item-details {
+                  .item-name {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                  }
+                  .item-price {
+                    font-weight: bold;
+                    font-size: 16px;
+                  }
+                  .container-cart-quantity {
+                    .item-quantity {
+                      font-size: 12px;
+                      padding: 4px 8px;
+                    }
+                    .item-more-quantity {
+                      padding: 2px 4px;
+                      font-size: 12px;
+                    }
+                    .item-less-quantity {
+                      padding: 2px 4px;
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
