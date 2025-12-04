@@ -9,7 +9,10 @@ import { setSearchFilter } from "../../store/slices/searchFilter";
 import { setPage } from "../../store/slices/paginationSlice";
 import { clearActiveCategory } from "../../store/slices/activeCategoryId";
 import { useState } from "react";
-import { increaseItemQuantity } from "../../store/slices/cartSlice";
+import {
+  increaseItemQuantity,
+  decreaseItemQuantity,
+} from "../../store/slices/cartSlice";
 
 const NavBar: React.FC = () => {
   const searchTerm = useSelector(
@@ -36,6 +39,10 @@ const NavBar: React.FC = () => {
 
   const handleMoreQuantity = (itemId: number) => {
     dispatch(increaseItemQuantity(itemId));
+  };
+
+  const handleLessQuantity = (itemId: number) => {
+    dispatch(decreaseItemQuantity(itemId));
   };
 
   return (
@@ -102,7 +109,12 @@ const NavBar: React.FC = () => {
                             +
                           </span>
                           <div className="item-quantity">{item.quantity}</div>
-                          <span className="item-less-quantity">-</span>
+                          <span
+                            className="item-less-quantity"
+                            onClick={() => handleLessQuantity(item.id)}
+                          >
+                            -
+                          </span>
                         </div>
                       </div>
                     </li>
