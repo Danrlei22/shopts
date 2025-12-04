@@ -9,6 +9,7 @@ import { setSearchFilter } from "../../store/slices/searchFilter";
 import { setPage } from "../../store/slices/paginationSlice";
 import { clearActiveCategory } from "../../store/slices/activeCategoryId";
 import { useState } from "react";
+import { increaseItemQuantity } from "../../store/slices/cartSlice";
 
 const NavBar: React.FC = () => {
   const searchTerm = useSelector(
@@ -31,6 +32,10 @@ const NavBar: React.FC = () => {
 
   const toggleCartClick = () => {
     setShowCart(!showCart);
+  };
+
+  const handleMoreQuantity = (itemId: number) => {
+    dispatch(increaseItemQuantity(itemId));
   };
 
   return (
@@ -90,7 +95,12 @@ const NavBar: React.FC = () => {
                           <p>
                             <strong>Qts</strong>
                           </p>
-                          <span className="item-more-quantity">+</span>
+                          <span
+                            className="item-more-quantity"
+                            onClick={() => handleMoreQuantity(item.id)}
+                          >
+                            +
+                          </span>
                           <div className="item-quantity">{item.quantity}</div>
                           <span className="item-less-quantity">-</span>
                         </div>
