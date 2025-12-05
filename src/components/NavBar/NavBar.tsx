@@ -94,9 +94,17 @@ const NavBar: React.FC = () => {
                             })}
                           </p>
                           <p>
-                            <strong>Total: </strong>
+                            <strong>Total item: </strong>
                           </p>
-                          <p className="item-total-price">Preço * Qts</p>
+                          <p className="item-total-price">
+                            {(item.price * item.quantity).toLocaleString(
+                              "pt-BR",
+                              {
+                                style: "currency",
+                                currency: "BRL",
+                              }
+                            )}
+                          </p>
                         </div>
                         <div className="container-cart-quantity">
                           <p>

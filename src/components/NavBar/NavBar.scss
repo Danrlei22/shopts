@@ -149,16 +149,18 @@
                 text-align: center;
                 .item-name {
                   font-weight: bold;
-                  margin-bottom: 20px;
+                  margin-bottom: 10px;
                 }
                 .item-price {
                   color: $color-primary;
                   margin-bottom: 5px;
                   font-weight: bold;
-                  font-size: 22px;
+                  font-size: 20px;
                 }
                 .item-total-price {
-                  color: red;
+                  color: $color-secondary;
+                  font-size: 16px;
+                  font-weight: bold;
                 }
               }
               .container-cart-quantity {
