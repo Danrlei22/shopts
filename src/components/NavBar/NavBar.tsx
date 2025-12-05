@@ -76,59 +76,77 @@ const NavBar: React.FC = () => {
             {cartItems.length === 0 ? (
               <p className="cart-empty">Your cart is empty</p>
             ) : (
-              <div className="cart-items">
-                <h2 className="cart-title">Shopping cart</h2>
-                <ul>
-                  {cartItems.map((item) => (
-                    <li key={item.id}>
-                      <div className="container-cart-item">
-                        <div className="item-image">
-                          <img src={item.imageURL} alt="Image item" />
-                        </div>
-                        <div className="item-details">
-                          <p className="item-name">{item.name}</p>
-                          <p className="item-price">
-                            {item.price.toLocaleString("pt-BR", {
-                              style: "currency",
-                              currency: "BRL",
-                            })}
-                          </p>
-                          <p>
-                            <strong>Total item: </strong>
-                          </p>
-                          <p className="item-total-price">
-                            {(item.price * item.quantity).toLocaleString(
-                              "pt-BR",
-                              {
+              <>
+                <div className="cart-items">
+                  <h2 className="cart-title">Shopping cart</h2>
+                  <ul>
+                    {cartItems.map((item) => (
+                      <li key={item.id}>
+                        <div className="container-cart-item">
+                          <div className="item-image">
+                            <img src={item.imageURL} alt="Image item" />
+                          </div>
+                          <div className="item-details">
+                            <p className="item-name">{item.name}</p>
+                            <p className="item-price">
+                              {item.price.toLocaleString("pt-BR", {
                                 style: "currency",
                                 currency: "BRL",
-                              }
-                            )}
-                          </p>
+                              })}
+                            </p>
+                            <p>
+                              <strong>Total item: </strong>
+                            </p>
+                            <p className="item-total-price">
+                              {(item.price * item.quantity).toLocaleString(
+                                "pt-BR",
+                                {
+                                  style: "currency",
+                                  currency: "BRL",
+                                }
+                              )}
+                            </p>
+                          </div>
+                          <div className="container-cart-quantity">
+                            <p>
+                              <strong>Qts</strong>
+                            </p>
+                            <span
+                              className="item-more-quantity"
+                              onClick={() => handleMoreQuantity(item.id)}
+                            >
+                              +
+                            </span>
+                            <div className="item-quantity">{item.quantity}</div>
+                            <span
+                              className="item-less-quantity"
+                              onClick={() => handleLessQuantity(item.id)}
+                            >
+                              -
+                            </span>
+                          </div>
                         </div>
-                        <div className="container-cart-quantity">
-                          <p>
-                            <strong>Qts</strong>
-                          </p>
-                          <span
-                            className="item-more-quantity"
-                            onClick={() => handleMoreQuantity(item.id)}
-                          >
-                            +
-                          </span>
-                          <div className="item-quantity">{item.quantity}</div>
-                          <span
-                            className="item-less-quantity"
-                            onClick={() => handleLessQuantity(item.id)}
-                          >
-                            -
-                          </span>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="cart-total-container">
+                  <p className="cart-total">
+                    <strong>
+                      Total:{" "}
+                      {cartItems
+                        .reduce(
+                          (total, item) => total + item.price * item.quantity,
+                          0
+                        )
+                        .toLocaleString("pt-BR", {
+                          style: "currency",
+                          currency: "BRL",
+                        })}
+                    </strong>
+                  </p>
+                </div>
+              </>
             )}
           </div>
         )}
