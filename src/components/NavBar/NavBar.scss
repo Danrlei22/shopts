@@ -117,7 +117,7 @@
           font-size: 22px;
           font-weight: bold;
           margin-bottom: 15px;
-          border-bottom: 2px solid $color-primary;
+          border-bottom: 4px solid $color-primary;
           padding-bottom: 5px;
         }
         ul {
@@ -130,6 +130,7 @@
             font-size: 14px;
             &:last-child {
               border-bottom: none;
+              margin-bottom: 30px;
             }
             .container-cart-item {
               display: flex;
@@ -202,10 +203,17 @@
         align-items: center;
         margin-top: 10px;
         padding: 0 10px;
+        border-top: 3px solid $color-primary;
+        height: 50px;
         .cart-total {
           font-size: 22px;
           font-weight: bold;
           color: $color-primary;
+        }
+        .cart-total-items {
+          font-size: 20px;
+          font-weight: bold;
+          color: $color-secondary;
         }
       }
     }
@@ -259,6 +267,19 @@
                 }
               }
             }
+          }
+        }
+        .cart-total-container {
+          flex-direction: column;
+          .cart-total {
+            font-size: 18px;
+            font-weight: bold;
+            color: $color-primary;
+          }
+          .cart-total-items {
+            font-size: 16px;
+            font-weight: bold;
+            color: $color-secondary;
           }
         }
       }

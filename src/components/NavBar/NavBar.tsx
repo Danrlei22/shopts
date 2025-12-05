@@ -145,6 +145,12 @@ const NavBar: React.FC = () => {
                         })}
                     </strong>
                   </p>
+                  <p className="cart-total-items">
+                    <strong>
+                      Items:{" "}
+                      {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
+                    </strong>
+                  </p>
                 </div>
               </>
             )}
