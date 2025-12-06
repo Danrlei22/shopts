@@ -170,11 +170,20 @@
                 align-items: center;
                 gap: 3px;
                 .item-quantity {
+                  width: 40px;
+                  height: 25px;
+                  text-align: center;
                   font-size: 14px;
                   font-weight: bold;
                   border: 1px solid $color-secondary;
                   padding: 5px 10px;
                   border-radius: 5px;
+                  box-sizing: border-box;
+                  &::-webkit-inner-spin-button,
+                  &::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                  }
                 }
                 .item-more-quantity {
                   background-color: green;

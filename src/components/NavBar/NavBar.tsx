@@ -12,6 +12,7 @@ import { useState } from "react";
 import {
   increaseItemQuantity,
   decreaseItemQuantity,
+  updateItemQuantity,
 } from "../../store/slices/cartSlice";
 
 const NavBar: React.FC = () => {
@@ -43,6 +44,11 @@ const NavBar: React.FC = () => {
 
   const handleLessQuantity = (itemId: number) => {
     dispatch(decreaseItemQuantity(itemId));
+  };
+
+  const handleQuantityChange = (itemId: number, newQuantity: number) => {
+    if (isNaN(newQuantity) || newQuantity <= 0) return;
+    dispatch(updateItemQuantity({ itemId, quantity: newQuantity }));
   };
 
   return (
@@ -117,7 +123,17 @@ const NavBar: React.FC = () => {
                             >
                               +
                             </span>
-                            <div className="item-quantity">{item.quantity}</div>
+                            <input
+                              type="number"
+                              className="item-quantity"
+                              value={item.quantity}
+                              onChange={(event) =>
+                                handleQuantityChange(
+                                  item.id,
+                                  Number(event.target.value)
+                                )
+                              }
+                            />
                             <span
                               className="item-less-quantity"
                               onClick={() => handleLessQuantity(item.id)}
