@@ -22,6 +22,7 @@ const NavBar: React.FC = () => {
   );
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const [showCart, setShowCart] = useState(false);
+  const [showConfirmClear, setShowConfirmClear] = useState(false);
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -53,7 +54,12 @@ const NavBar: React.FC = () => {
   };
 
   const handleCleanCart = () => {
+    setShowConfirmClear(!showConfirmClear);
+  };
+
+  const confirmCleanCart = () => {
     dispatch(cleanCart());
+    setShowConfirmClear(false);
   };
 
   return (
@@ -149,6 +155,25 @@ const NavBar: React.FC = () => {
                   <div className="btn-clean-cart">
                     <span onClick={handleCleanCart}>Clear cart</span>
                   </div>
+                  {showConfirmClear && (
+                    <div className="modal-confirm-clean">
+                      <p className="modal-cofirm-text">Are you want to clean cart?</p>
+                      <div className="confirm-actions">
+                        <button
+                          className="btn-confirm-clean"
+                          onClick={confirmCleanCart}
+                        >
+                          Yes
+                        </button>
+                        <button
+                          className="btn-cancel-clean"
+                          onClick={() => setShowConfirmClear(false)}
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="cart-total-container">
                   <p className="cart-total">
