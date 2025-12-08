@@ -100,9 +100,7 @@ const NavBar: React.FC = () => {
                                 currency: "BRL",
                               })}
                             </p>
-                            <p>
-                              <strong>Total item: </strong>
-                            </p>
+                            <p>Total item:</p>
                             <p className="item-total-price">
                               {(item.price * item.quantity).toLocaleString(
                                 "pt-BR",
@@ -114,9 +112,7 @@ const NavBar: React.FC = () => {
                             </p>
                           </div>
                           <div className="container-cart-quantity">
-                            <p>
-                              <strong>Qts</strong>
-                            </p>
+                            <p>Qts</p>
                             <span
                               className="item-more-quantity"
                               onClick={() => handleMoreQuantity(item.id)}
