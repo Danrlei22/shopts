@@ -156,23 +156,28 @@ const NavBar: React.FC = () => {
                     <span onClick={handleCleanCart}>Clear cart</span>
                   </div>
                   {showConfirmClear && (
-                    <div className="modal-confirm-clean">
-                      <p className="modal-cofirm-text">Are you want to clean cart?</p>
-                      <div className="confirm-actions">
-                        <button
-                          className="btn-confirm-clean"
-                          onClick={confirmCleanCart}
-                        >
-                          Yes
-                        </button>
-                        <button
-                          className="btn-cancel-clean"
-                          onClick={() => setShowConfirmClear(false)}
-                        >
-                          Cancel
-                        </button>
+                    <>
+                      <div className="overlay-block"></div>
+                      <div className="modal-confirm-clean">
+                        <p className="modal-cofirm-text">
+                          Are you want to clean cart?
+                        </p>
+                        <div className="confirm-actions">
+                          <button
+                            className="btn-confirm-clean"
+                            onClick={confirmCleanCart}
+                          >
+                            Yes
+                          </button>
+                          <button
+                            className="btn-cancel-clean"
+                            onClick={() => setShowConfirmClear(false)}
+                          >
+                            Cancel
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </>
                   )}
                 </div>
                 <div className="cart-total-container">
