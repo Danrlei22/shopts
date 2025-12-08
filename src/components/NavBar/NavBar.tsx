@@ -13,6 +13,7 @@ import {
   increaseItemQuantity,
   decreaseItemQuantity,
   updateItemQuantity,
+  cleanCart,
 } from "../../store/slices/cartSlice";
 
 const NavBar: React.FC = () => {
@@ -49,6 +50,10 @@ const NavBar: React.FC = () => {
   const handleQuantityChange = (itemId: number, newQuantity: number) => {
     if (isNaN(newQuantity) || newQuantity <= 0) return;
     dispatch(updateItemQuantity({ itemId, quantity: newQuantity }));
+  };
+
+  const handleCleanCart = () => {
+    dispatch(cleanCart());
   };
 
   return (
@@ -141,6 +146,9 @@ const NavBar: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="btn-clean-cart">
+                    <span onClick={handleCleanCart}>Clear cart</span>
+                  </div>
                 </div>
                 <div className="cart-total-container">
                   <p className="cart-total">

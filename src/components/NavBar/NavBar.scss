@@ -208,6 +208,13 @@
           }
         }
       }
+      .btn-clean-cart {
+        text-align: center;
+        text-decoration: underline;
+        color: red;
+        font-size: 14px;
+        cursor: pointer;
+      }
       .cart-total-container {
         display: flex;
         justify-content: space-between;
