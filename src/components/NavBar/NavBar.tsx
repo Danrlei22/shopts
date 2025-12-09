@@ -1,4 +1,4 @@
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass, FaTrashCan } from "react-icons/fa6";
 import "./NavBar.scss";
 import { BsCart } from "react-icons/bs";
 import marcaTS from "../../assets/marcaTS.png";
@@ -14,6 +14,7 @@ import {
   decreaseItemQuantity,
   updateItemQuantity,
   cleanCart,
+  removeItem,
 } from "../../store/slices/cartSlice";
 
 const NavBar: React.FC = () => {
@@ -62,6 +63,14 @@ const NavBar: React.FC = () => {
     setShowConfirmClear(false);
   };
 
+  const handleRemoveItem = (itemId: number) => {
+    const itemToRemove = cartItems.find((item) => item.id === itemId);
+
+    if (itemToRemove) {
+      dispatch(removeItem(itemToRemove));
+    }
+  };
+
   return (
     <nav className="nav-bar">
       <div>
@@ -99,6 +108,12 @@ const NavBar: React.FC = () => {
                   <ul>
                     {cartItems.map((item) => (
                       <li key={item.id}>
+                        <span
+                          className="item-remove"
+                          onClick={() => handleRemoveItem(item.id)}
+                        >
+                          <FaTrashCan />
+                        </span>
                         <div className="container-cart-item">
                           <div className="item-image">
                             <img src={item.imageURL} alt="Image item" />

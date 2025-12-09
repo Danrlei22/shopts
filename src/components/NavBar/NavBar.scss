@@ -128,9 +128,22 @@
             padding: 10px 0;
             border-bottom: 1px solid #a6a6a6;
             font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:last-child {
               border-bottom: none;
               margin-bottom: 30px;
+            }
+            .item-remove {
+              width: 5px;
+              height: auto;
+              cursor: pointer;
+              margin-right: 10px;
+              color: red;
+              &:hover {
+                transform: scale(0.95);
+              }
             }
             .container-cart-item {
               display: flex;
@@ -196,7 +209,7 @@
                   font-size: 14px;
                 }
                 .item-less-quantity {
-                  background-color: red;
+                  background-color: rgba(7, 7, 222, 0.835);
                   color: #fff;
                   padding: 2px 6px;
                   border-radius: 50%;
@@ -215,10 +228,10 @@
         font-size: 14px;
         cursor: pointer;
       }
-      .overlay-block{
+      .overlay-block {
         position: fixed;
         inset: 0;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 998;
       }
       .modal-confirm-clean {
