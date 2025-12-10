@@ -4,6 +4,9 @@
   width: 270px;
   height: 310px;
   border: solid 2px $color-secondary;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
   .product-img {
     width: 100%;
     height: auto;
@@ -52,5 +55,11 @@
         transform: scale(0.9);
       }
     }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
   }
 }

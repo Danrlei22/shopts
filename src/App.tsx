@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Help from "./pages/Help";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ProductDetail from "./components/ProductDetail/Productdetail";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
-
+        <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/help" element={<Help />} />
         <Route path="/termofuse" element={<TermsOfUse />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />

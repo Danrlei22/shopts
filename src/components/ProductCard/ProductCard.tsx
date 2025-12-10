@@ -4,6 +4,7 @@ import { BsCart } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store";
 import { addItem } from "../../store/slices/cartSlice";
+import { Link } from "react-router-dom";
 
 interface ProductCardProps {
   product: Product;
@@ -17,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="product-card">
+    <Link to={`/product/${product.id}`} className="product-card">
       <img
         src={product.imageURL}
         alt={`Description: ${product.description}`}
@@ -42,7 +43,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           Add <BsCart />
         </button>
       </div>
-    </div>
+    </Link>
   );
 };
 
