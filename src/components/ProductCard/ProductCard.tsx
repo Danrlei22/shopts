@@ -18,7 +18,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <Link to={`/product/${product.id}`} className="product-card">
+    <Link
+      to={`/product/${product.id}`}
+      state={{ product }} //state product for to productDetail
+      className="product-card"
+    >
       <img
         src={product.imageURL}
         alt={`Description: ${product.description}`}
