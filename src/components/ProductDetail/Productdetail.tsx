@@ -1,10 +1,18 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import Simplelayout from "../Layout/SimpleLayout";
 import "./ProductDetail.scss";
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store";
 
 const ProductDetail: React.FC = () => {
   const location = useLocation();
-  const product = location.state?.product;
+  const productFromState = location.state?.product;
+
+  const { id } = useParams<{ id: string }>();
+  const productId = Number(id);
+  const products = useSelector((state: RootState) => state.products.items);
+
+  const product = productFromState ?? products.find((p) => p.id === productId);
 
   if (!product) {
     return (

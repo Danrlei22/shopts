@@ -5,8 +5,17 @@ import Help from "./pages/Help";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ProductDetail from "./components/ProductDetail/Productdetail";
+import { useEffect } from "react";
+import { fetchProducts } from "../src/store/slices/productsSlice";
+import { useAppDispatch } from "./store";
 
 function App() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <Routes>
