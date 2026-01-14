@@ -1,43 +1,86 @@
+@use "../../styles/variables" as *;
+
 .container-product-detail {
   width: 100%;
-  display: flex;
+  display: grid;
+  margin: 3em auto;
+  grid-template-columns: 1.2fr 1.3fr 0.8fr;
+  gap: 2em;
   padding: 2em;
   .product-media {
     padding: 1em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
-      width: 400px;
-      height: 300px;
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    &:hover img {
+      transform: scale(1.05);
     }
   }
   .product-desc {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    text-align: left;
+    gap: 1em;
     .desc-name {
       font-size: 22px;
       font-weight: bold;
-      margin: 10px;
-      margin-bottom: 15px;
     }
     .desc-description {
       font-size: 16px;
-      margin: 10px;
+      color: #555;
+      line-height: 1.6;
     }
   }
   .product-values {
-    border: solid 2px rgb(200, 200, 200);
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 1em;
+    height: fit-content;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     .desc-values {
       font-size: 24px;
       font-weight: bold;
-      margin: 2em;
+      color: $color-primary;
+      margin-bottom: 1.5em;
+    }
+    .btn-values {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      button {
+        height: 42px;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2 ease;
+      }
+      .btn-buy {
+        background-color: $color-tertiary;
+        color: #fff;
+        &:hover {
+          filter: brightness(1.1);
+        }
+      }
+      .btn-cart {
+        background-color: transparent;
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        &:hover {
+          background-color: $color-primary;
+          color: #fff;
+        }
+      }
     }
   }
 }

@@ -51,14 +51,14 @@ const ProductDetail: React.FC = () => {
             })}
           </p>
           <p>{product.quantity}</p>
-          <div>
+          <div className="btn-values">
             <button className="btn-buy">Buy</button>
             <button
               className="btn-cart"
               type="button"
               onClick={handleAddProductToCart}
             >
-              Add <BsCart />
+              <BsCart /> Add cart
             </button>
           </div>
         </div>
