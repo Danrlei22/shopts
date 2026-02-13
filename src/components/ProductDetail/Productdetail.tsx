@@ -1,5 +1,5 @@
 import { useLocation, useParams } from "react-router-dom";
-import Simplelayout from "../Layout/SimpleLayout";
+import SimplesLayoutWithCart from "../Layout/SimpleLayoutWithCart";
 import "./ProductDetail.scss";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store";
@@ -20,9 +20,9 @@ const ProductDetail: React.FC = () => {
 
   if (!product) {
     return (
-      <Simplelayout>
+      <SimplesLayoutWithCart>
         <h1>Product not found...</h1>
-      </Simplelayout>
+      </SimplesLayoutWithCart>
     );
   }
 
@@ -31,7 +31,7 @@ const ProductDetail: React.FC = () => {
   };
 
   return (
-    <Simplelayout>
+    <SimplesLayoutWithCart>
       <section className="container-product-detail">
         <div className="product-media">
           <img src={product.imageURL} alt={product.name} />
@@ -63,7 +63,7 @@ const ProductDetail: React.FC = () => {
           </div>
         </div>
       </section>
-    </Simplelayout>
+    </SimplesLayoutWithCart>
   );
 };
 
