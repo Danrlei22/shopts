@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import marcaTS from "../../assets/marcaTS.png";
 import { IoArrowUndoOutline } from "react-icons/io5";
 import "./SimpleNavBarWithCart.scss";
+import Cart from "../Cart/Cart";
 
 const SimpleNavBarWithCart: React.FC = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const SimpleNavBarWithCart: React.FC = () => {
       <Link to="/">
         <img src={marcaTS} alt="Marca ShoTS" />
       </Link>
+      <Cart />
     </nav>
   );
 };

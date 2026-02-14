@@ -5,9 +5,8 @@
   height: 6em;
   background-color: $color-primary;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 2em;
   .btn-back {
     background: none;
     cursor: pointer;
