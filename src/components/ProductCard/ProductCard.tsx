@@ -18,19 +18,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <Link
-      to={`/product/${product.id}`}
-      state={{ product }} //state product for to productDetail
-      className="product-card"
-    >
-      <img
-        src={product.imageURL}
-        alt={`Description: ${product.description}`}
-        className="product-img"
-      />
-      <div className="product-name">
-        <h3 className="name">{product.name}</h3>
-      </div>
+    <div className="product-card">
+      <Link
+        to={`/product/${product.id}`}
+        state={{ product }} //state product for to productDetail
+        className="link-product"
+      >
+        <img
+          src={product.imageURL}
+          alt={`Description: ${product.description}`}
+          className="product-img"
+        />
+        <div className="product-name">
+          <h3 className="name">{product.name}</h3>
+        </div>
+      </Link>
       <p className="product-price">
         {product.price.toLocaleString("pt-BR", {
           style: "currency",
@@ -47,7 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           Add <BsCart />
         </button>
       </div>
-    </Link>
+    </div>
   );
 };
 
