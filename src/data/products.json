@@ -165,7 +165,7 @@
     "price": 239.9,
     "description": "Tecido macio e design moderno para sala.",
     "categoryId": 26,
-    "imageURL": "https://placehold.co/600x400?text=Tapete+Geometrico"
+    "imageURL": "/products/product-21.png"
   },
   {
     "id": 22,
@@ -173,7 +173,7 @@
     "price": 89.9,
     "description": "Ajustável, ideal para estudos e trabalho.",
     "categoryId": 26,
-    "imageURL": "https://placehold.co/600x400?text=Luminaria+LED"
+    "imageURL": "/products/product-22.png"
   },
   {
     "id": 23,
@@ -181,7 +181,7 @@
     "price": 299.0,
     "description": "Som estéreo com iluminação RGB e graves reforçados.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Redragon+GS520"
+    "imageURL": "/products/product-23.png"
   },
   {
     "id": 24,
@@ -189,7 +189,7 @@
     "price": 1299.0,
     "description": "Tela de 10.5”, 64GB, ideal para estudos e lazer.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Galaxy+Tab+A9"
+    "imageURL": "/products/product-24.png"
   },
   {
     "id": 25,
@@ -197,7 +197,7 @@
     "price": 2499.0,
     "description": "WebOS, HDR10, controle por voz e Bluetooth.",
     "categoryId": 2,
-    "imageURL": "https://placehold.co/600x400?text=Smart+TV+LG"
+    "imageURL": "/products/product-25.png"
   },
   {
     "id": 26,
@@ -205,7 +205,7 @@
     "price": 3999.0,
     "description": "SSD ultrarrápido, controle DualSense e gráficos 4K.",
     "categoryId": 22,
-    "imageURL": "https://placehold.co/600x400?text=PlayStation+5"
+    "imageURL": "/products/product-26.png"
   },
   {
     "id": 27,
@@ -213,7 +213,7 @@
     "price": 349.0,
     "description": "Clássico, confortável e estiloso.",
     "categoryId": 18,
-    "imageURL": "https://placehold.co/600x400?text=Vans+Old+Skool"
+    "imageURL": "/products/product-27.png"
   },
   {
     "id": 28,
@@ -221,7 +221,7 @@
     "price": 39.9,
     "description": "Confortável, resistente e ideal para o dia a dia.",
     "categoryId": 18,
-    "imageURL": "https://placehold.co/600x400?text=Havaianas+Top"
+    "imageURL": "/products/product-28.png"
   },
   {
     "id": 29,
@@ -229,7 +229,7 @@
     "price": 49.9,
     "description": "Ajustável e elegante para qualquer ocasião.",
     "categoryId": 17,
-    "imageURL": "https://placehold.co/600x400?text=Pulseira+Couro"
+    "imageURL": "/products/product-29.png"
   },
   {
     "id": 30,
@@ -237,7 +237,7 @@
     "price": 119.9,
     "description": "Ideal para sala, quarto ou escritório.",
     "categoryId": 26,
-    "imageURL": "https://placehold.co/600x400?text=Quadro+Minimalista"
+    "imageURL": "/products/product-30.png"
   },
   {
     "id": 31,
