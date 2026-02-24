@@ -5,7 +5,7 @@
     "price": 3899.0,
     "description": "Intel Core i5, 8GB RAM, SSD 512GB, Windows 11.",
     "categoryId": 8,
-    "imageURL": "https://placehold.co/600x400?text=Notebook+Dell"
+    "imageURL": "/products/product-1.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 199.0,
     "description": "16000 DPI, RGB customizável.",
     "categoryId": 8,
-    "imageURL": "https://placehold.co/600x400?text=Mouse+Gamer"
+    "imageURL": "/products/product-2.png"
   },
   {
     "id": 3,
