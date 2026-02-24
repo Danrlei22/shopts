@@ -21,7 +21,7 @@
     "price": 499.99,
     "description": "Leve, Bluetooth, som estéreo imersivo.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-3.png"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 289.9,
     "description": "Switches Outemu Blue, iluminação RGB completa.",
     "categoryId": 8,
-    "imageURL": "https://placehold.co/600x400?text=Teclado+Redragon"
+    "imageURL": "/products/product-4.png"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 699.0,
     "description": "Bluetooth, à prova d’água e graves potentes.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=JBL+Flip+6"
+    "imageURL": "/products/product-5.png"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "price": 1599.0,
     "description": "128GB, 8GB RAM, câmera tripla, 5G.",
     "categoryId": 5,
-    "imageURL": "https://placehold.co/600x400?text=Galaxy+A35"
+    "imageURL": "/products/product-6.png"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "price": 429.0,
     "description": "Monitor de batimentos, sono e resistência à água.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Amazfit+Bip+U"
+    "imageURL": "/products/product-7.png"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "price": 499.0,
     "description": "Design ergonômico, compatível com PC e Xbox.",
     "categoryId": 22,
-    "imageURL": "https://placehold.co/600x400?text=Controle+Xbox"
+    "imageURL": "/products/product-8.png"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "price": 1599.0,
     "description": "144Hz, 1ms, painel IPS, ideal para gamers.",
     "categoryId": 8,
-    "imageURL": "https://placehold.co/600x400?text=Monitor+LG"
+    "imageURL": "/products/product-9.png"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "price": 279.0,
     "description": "Cancelamento de ruído ativo, até 38h de bateria.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Redmi+Buds+5"
+    "imageURL": "/products/product-10.png"
   },
   {
     "id": 11,
