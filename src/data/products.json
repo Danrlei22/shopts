@@ -85,7 +85,7 @@
     "price": 59.9,
     "description": "Tecido 100% algodão, confortável e leve.",
     "categoryId": 4,
-    "imageURL": "https://placehold.co/600x400?text=Camiseta+Branca"
+    "imageURL": "/products/product-11.png"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "price": 349.9,
     "description": "Amortecimento leve e design moderno.",
     "categoryId": 18,
-    "imageURL": "https://placehold.co/600x400?text=Tênis+Adidas"
+    "imageURL": "/products/product-12.png"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "price": 189.9,
     "description": "Corte moderno, ideal para o dia a dia.",
     "categoryId": 4,
-    "imageURL": "https://placehold.co/600x400?text=Jaqueta+Jeans"
+    "imageURL": "/products/product-13.png"
   },
   {
     "id": 14,
@@ -109,7 +109,7 @@
     "price": 129.9,
     "description": "Fecho ajustável e tecido leve.",
     "categoryId": 4,
-    "imageURL": "https://placehold.co/600x400?text=Boné+Nike"
+    "imageURL": "/products/product-14.png"
   },
   {
     "id": 15,
@@ -117,7 +117,7 @@
     "price": 239.0,
     "description": "Clássico, resistente e cheio de estilo.",
     "categoryId": 19,
-    "imageURL": "https://placehold.co/600x400?text=Casio+Vintage"
+    "imageURL": "/products/product-15.png"
   },
   {
     "id": 16,
@@ -125,7 +125,7 @@
     "price": 159.9,
     "description": "Modelagem justa e tecido stretch.",
     "categoryId": 4,
-    "imageURL": "https://placehold.co/600x400?text=Calça+Jeans"
+    "imageURL": "/products/product-16.png"
   },
   {
     "id": 17,
@@ -133,7 +133,7 @@
     "price": 429.9,
     "description": "Frita sem óleo, fácil de limpar e com timer digital.",
     "categoryId": 7,
-    "imageURL": "https://placehold.co/600x400?text=Air+Fryer"
+    "imageURL": "/products/product-17.png"
   },
   {
     "id": 18,
@@ -141,7 +141,7 @@
     "price": 299.9,
     "description": "600W, jarra de 2L, lâminas de alta performance.",
     "categoryId": 7,
-    "imageURL": "https://placehold.co/600x400?text=Liquidificador"
+    "imageURL": "/products/product-18.png"
   },
   {
     "id": 19,
@@ -149,7 +149,7 @@
     "price": 649.0,
     "description": "Pressão de 15 bar, prepara cafés e bebidas quentes.",
     "categoryId": 7,
-    "imageURL": "https://placehold.co/600x400?text=Cafeteira"
+    "imageURL": "/products/product-19.png"
   },
   {
     "id": 20,
@@ -157,7 +157,7 @@
     "price": 499.0,
     "description": "Alta sucção, filtro HEPA e fácil de limpar.",
     "categoryId": 7,
-    "imageURL": "https://placehold.co/600x400?text=Aspirador+Electrolux"
+    "imageURL": "/products/product-20.png"
   },
   {
     "id": 21,
