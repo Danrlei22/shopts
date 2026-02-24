@@ -245,62 +245,78 @@
     "price": 499.99,
     "description": "Leve, Bluetooth, som estéreo imersivo.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-31.png"
   },
   {
     "id": 32,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
-    "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "name": "Bicicleta Aro 26",
+    "price": 1338.55,
+    "description": "Vikingx Tuff 25 ou 30 do Grau Vmaxx Pneu Azul com BRINDE patinho de borracha.",
+    "categoryId": 10,
+    "imageURL": "/products/product-32.png"
   },
   {
     "id": 33,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "Mouse Gamer Redragon Cobra",
+    "price": 189.9,
+    "description": "Mouse gamer RGB com sensor preciso e 7 botões programáveis.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-33.png"
   },
   {
     "id": 34,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "Teclado Mecânico HyperX Alloy",
+    "price": 599.0,
+    "description": "Teclado mecânico compacto com switches rápidos e iluminação RGB.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-34.png"
   },
   {
     "id": 35,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "Webcam Full HD Logitech",
+    "price": 329.5,
+    "description": "Webcam Full HD ideal para reuniões, lives e videochamadas.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-35.png"
   },
   {
     "id": 36,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "Caixa de Som Bluetooth JBL Go",
+    "price": 259.9,
+    "description": "Caixa portátil com som potente, Bluetooth e bateria durável.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-36.png"
   },
   {
     "id": 37,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "Monitor Gamer AOC 24\"",
+    "price": 1299.0,
+    "description": "Monitor gamer 144Hz com painel IPS e tempo de resposta rápido.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-37.png"
   },
   {
     "id": 38,
-    "name": "Headset Logitech G435",
-    "price": 499.99,
-    "description": "Leve, Bluetooth, som estéreo imersivo.",
+    "name": "SSD Kingston 1TB NVMe",
+    "price": 449.0,
+    "description": "SSD NVMe de alta velocidade para upgrade de desempenho.",
     "categoryId": 1,
-    "imageURL": "https://placehold.co/600x400?text=Headset+Logitech"
+    "imageURL": "/products/product-38.png"
+  },
+  {
+    "id": 39,
+    "name": "Controle Xbox Wireless",
+    "price": 389.9,
+    "description": "Controle sem fio ergonômico compatível com PC e console.",
+    "categoryId": 1,
+    "imageURL": "/products/product-39.png"
+  },
+  {
+    "id": 40,
+    "name": "Hub USB-C Multiport",
+    "price": 149.99,
+    "description": "Hub USB-C com múltiplas portas para expandir conexões.",
+    "categoryId": 1,
+    "imageURL": "/products/product-40.png"
   }
 ]
