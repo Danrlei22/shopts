@@ -230,6 +230,22 @@
         color: $color-secondary;
       }
     }
+    .btn-finish-cart {
+      background: #2ea44f;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 80%;
+      margin: 10px auto;
+      display: block;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
   }
 }
 

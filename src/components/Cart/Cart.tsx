@@ -53,6 +53,10 @@ const Cart: React.FC = () => {
     }
   };
 
+  const handleFinishCart = () => {
+    alert("Cart finished! Thank you for your purchase.");
+  };
+
   return (
     <div className="cart-container">
       <button type="button" className="cart-button" onClick={toggleCartClick}>
@@ -97,7 +101,7 @@ const Cart: React.FC = () => {
                               {
                                 style: "currency",
                                 currency: "BRL",
-                              }
+                              },
                             )}
                           </p>
                         </div>
@@ -116,7 +120,7 @@ const Cart: React.FC = () => {
                             onChange={(event) =>
                               handleQuantityChange(
                                 item.id,
-                                Number(event.target.value)
+                                Number(event.target.value),
                               )
                             }
                           />
@@ -166,7 +170,7 @@ const Cart: React.FC = () => {
                     {cartItems
                       .reduce(
                         (total, item) => total + item.price * item.quantity,
-                        0
+                        0,
                       )
                       .toLocaleString("pt-BR", {
                         style: "currency",
@@ -180,6 +184,11 @@ const Cart: React.FC = () => {
                     {cartItems.reduce((sum, item) => sum + item.quantity, 0)}
                   </strong>
                 </p>
+              </div>
+              <div className="finish-cart">
+                <button className="btn-finish-cart" onClick={handleFinishCart}>
+                  Finish cart
+                </button>
               </div>
             </>
           )}
