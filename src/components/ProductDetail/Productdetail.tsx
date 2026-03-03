@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import SimplesLayoutWithCart from "../Layout/SimpleLayoutWithCart";
 import "./ProductDetail.scss";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,6 +6,7 @@ import type { RootState } from "../../store";
 import { BsCart } from "react-icons/bs";
 import { addItem } from "../../store/slices/cartSlice";
 import { toast } from "react-toastify";
+import { setPage } from "../../store/slices/paginationSlice";
 
 const ProductDetail: React.FC = () => {
   const location = useLocation();
@@ -18,6 +19,7 @@ const ProductDetail: React.FC = () => {
   const product = productFromState ?? products.find((p) => p.id === productId);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   if (!product) {
     return (
@@ -30,6 +32,14 @@ const ProductDetail: React.FC = () => {
   const handleAddProductToCart = () => {
     dispatch(addItem(product));
     toast.success(`${product.name} added to cart!`);
+  };
+
+  const handleFinishedPurchase = () => {
+    alert(
+      "Cart finished! Thank you for your purchase. Redirecting to home page...",
+    );
+    dispatch(setPage(1));
+    navigate("/");
   };
 
   return (
@@ -54,7 +64,9 @@ const ProductDetail: React.FC = () => {
           </p>
           <p>{product.quantity}</p>
           <div className="btn-values">
-            <button className="btn-buy">Buy</button>
+            <button className="btn-buy" onClick={handleFinishedPurchase}>
+              Buy
+            </button>
             <button
               className="btn-cart"
               type="button"
