@@ -11,11 +11,14 @@ import {
   removeItem,
 } from "../../store/slices/cartSlice";
 import "./Cart.scss";
+import { setPage } from "../../store/slices/paginationSlice";
+import { useNavigate } from "react-router-dom";
 
 const Cart: React.FC = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const [showCart, setShowCart] = useState(false);
   const [showConfirmClear, setShowConfirmClear] = useState(false);
+  const navigate = useNavigate();
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -54,7 +57,13 @@ const Cart: React.FC = () => {
   };
 
   const handleFinishCart = () => {
-    alert("Cart finished! Thank you for your purchase.");
+    alert(
+      "Cart finished! Thank you for your purchase. Redirecting to home page...",
+    );
+    dispatch(cleanCart());
+    setShowCart(false);
+    dispatch(setPage(1));
+    navigate("/");
   };
 
   return (
