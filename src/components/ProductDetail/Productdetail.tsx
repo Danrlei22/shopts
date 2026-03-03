@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../store";
 import { BsCart } from "react-icons/bs";
 import { addItem } from "../../store/slices/cartSlice";
+import { toast } from "react-toastify";
 
 const ProductDetail: React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const ProductDetail: React.FC = () => {
 
   const handleAddProductToCart = () => {
     dispatch(addItem(product));
+    toast.success(`${product.name} added to cart!`);
   };
 
   return (

@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store";
 import { addItem } from "../../store/slices/cartSlice";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 interface ProductCardProps {
   product: Product;
@@ -15,6 +16,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   const handleAddProductToCart = () => {
     dispatch(addItem(product));
+    toast.success(`${product.name} added to cart!`);
   };
 
   return (

@@ -4,10 +4,11 @@ import About from "./pages/About";
 import Help from "./pages/Help";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ProductDetail from "./components/ProductDetail/Productdetail";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 import { useEffect } from "react";
 import { fetchProducts } from "../src/store/slices/productsSlice";
 import { useAppDispatch } from "./store";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/termofuse" element={<TermsOfUse />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
       </Routes>
+      <ToastContainer position="bottom-center" autoClose={5000}/>
     </BrowserRouter>
   );
 }
