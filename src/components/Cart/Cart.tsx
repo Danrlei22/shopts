@@ -47,6 +47,7 @@ const Cart: React.FC = () => {
   const confirmCleanCart = () => {
     dispatch(cleanCart());
     setShowConfirmClear(false);
+    setShowCart(false);
   };
 
   const handleRemoveItem = (itemId: number) => {

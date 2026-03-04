@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { fetchProducts } from "../src/store/slices/productsSlice";
 import { useAppDispatch } from "./store";
 import { ToastContainer } from "react-toastify";
+import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -26,8 +27,9 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="/termofuse" element={<TermsOfUse />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/checkout-success" element={<CheckoutSuccess />} />
       </Routes>
-      <ToastContainer position="bottom-center" autoClose={5000}/>
+      <ToastContainer position="bottom-center" autoClose={5000} />
     </BrowserRouter>
   );
 }

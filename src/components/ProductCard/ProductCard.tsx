@@ -6,7 +6,6 @@ import type { AppDispatch } from "../../store";
 import { addItem } from "../../store/slices/cartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { setPage } from "../../store/slices/paginationSlice";
 
 interface ProductCardProps {
   product: Product;
@@ -19,14 +18,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleAddProductToCart = () => {
     dispatch(addItem(product));
     toast.success(`${product.name} added to cart!`);
-  };
-
-  const handleFinishedPurchase = () => {
-    alert(
-      "Cart finished! Thank you for your purchase. Redirecting to home page...",
-    );
-    dispatch(setPage(1));
-    navigate("/");
   };
 
   return (
@@ -52,7 +43,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         })}
       </p>
       <div className="product-btn">
-        <button className="btn-buy" onClick={handleFinishedPurchase}>
+        <button
+          className="btn-buy"
+          onClick={() => navigate("/checkout-success")}
+        >
           Buy
         </button>
         <button
