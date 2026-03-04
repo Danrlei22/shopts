@@ -84,7 +84,7 @@
             margin-right: 10px;
             color: red;
             &:hover {
-              transform: scale(0.95);
+              transform: scale(1.1);
             }
           }
           .container-cart-item {
@@ -113,11 +113,11 @@
                 color: $color-primary;
                 margin-bottom: 5px;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 26px;
               }
               .item-total-price {
                 color: $color-secondary;
-                font-size: 16px;
+                font-size: 14px;
                 font-weight: bold;
               }
             }
@@ -164,11 +164,21 @@
       }
     }
     .btn-clean-cart {
-      text-align: center;
-      text-decoration: underline;
-      color: red;
-      font-size: 14px;
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        cursor: pointer;
+        background: rgb(224, 43, 43);
+        color: #fff;
+        padding: 2px 10px;
+        border: none;
+        border-radius: 5px;
+        gap: 8px;
+      }
     }
     .overlay-block {
       position: fixed;
@@ -220,7 +230,7 @@
       border-top: 3px solid $color-primary;
       height: 50px;
       .cart-total {
-        font-size: 22px;
+        font-size: 24px;
         font-weight: bold;
         color: $color-primary;
       }

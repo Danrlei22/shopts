@@ -13,6 +13,7 @@ import {
 import "./Cart.scss";
 import { setPage } from "../../store/slices/paginationSlice";
 import { useNavigate } from "react-router-dom";
+import { PiBroomFill } from "react-icons/pi";
 
 const Cart: React.FC = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
@@ -103,7 +104,7 @@ const Cart: React.FC = () => {
                               currency: "BRL",
                             })}
                           </p>
-                          <p>Total item:</p>
+                          <p>Subtotal:</p>
                           <p className="item-total-price">
                             {(item.price * item.quantity).toLocaleString(
                               "pt-BR",
@@ -145,7 +146,9 @@ const Cart: React.FC = () => {
                   ))}
                 </ul>
                 <div className="btn-clean-cart">
-                  <span onClick={handleCleanCart}>Clear cart</span>
+                  <button type="button" onClick={handleCleanCart}>
+                    Clear cart <PiBroomFill />
+                  </button>
                 </div>
                 {showConfirmClear && (
                   <>
@@ -196,7 +199,7 @@ const Cart: React.FC = () => {
               </div>
               <div className="finish-cart">
                 <button className="btn-finish-cart" onClick={handleFinishCart}>
-                  Finish cart
+                  Finish purchase
                 </button>
               </div>
             </>
