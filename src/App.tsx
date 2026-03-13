@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { fetchProducts } from "../src/store/slices/productsSlice";
 import { useAppDispatch } from "./store";
 import { ToastContainer } from "react-toastify";
-import CheckoutSuccess from "./pages/CheckoutSuccess";
+import CheckoutSuccess from "./pages/CheckoutSuccess/CheckoutSuccess";
 
 function App() {
   const dispatch = useAppDispatch();
