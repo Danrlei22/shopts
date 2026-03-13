@@ -11,7 +11,6 @@ import {
   removeItem,
 } from "../../store/slices/cartSlice";
 import "./Cart.scss";
-import { setPage } from "../../store/slices/paginationSlice";
 import { useNavigate } from "react-router-dom";
 import { PiBroomFill } from "react-icons/pi";
 
@@ -56,16 +55,6 @@ const Cart: React.FC = () => {
     if (itemToRemove) {
       dispatch(removeItem(itemToRemove));
     }
-  };
-
-  const handleFinishCart = () => {
-    alert(
-      "Cart finished! Thank you for your purchase. Redirecting to home page...",
-    );
-    dispatch(cleanCart());
-    setShowCart(false);
-    dispatch(setPage(1));
-    navigate("/");
   };
 
   return (
@@ -199,7 +188,10 @@ const Cart: React.FC = () => {
                 </p>
               </div>
               <div className="finish-cart">
-                <button className="btn-finish-cart" onClick={handleFinishCart}>
+                <button
+                  className="btn-finish-cart"
+                  onClick={() => navigate("/checkout-success")}
+                >
                   Finish purchase
                 </button>
               </div>

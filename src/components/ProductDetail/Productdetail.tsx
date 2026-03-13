@@ -6,7 +6,6 @@ import type { RootState } from "../../store";
 import { BsCart } from "react-icons/bs";
 import { addItem } from "../../store/slices/cartSlice";
 import { toast } from "react-toastify";
-import { setPage } from "../../store/slices/paginationSlice";
 
 const ProductDetail: React.FC = () => {
   const location = useLocation();
@@ -34,14 +33,6 @@ const ProductDetail: React.FC = () => {
     toast.success(`${product.name} added to cart!`);
   };
 
-  const handleFinishedPurchase = () => {
-    alert(
-      "Cart finished! Thank you for your purchase. Redirecting to home page...",
-    );
-    dispatch(setPage(1));
-    navigate("/");
-  };
-
   return (
     <SimplesLayoutWithCart>
       <section className="container-product-detail">
@@ -64,7 +55,10 @@ const ProductDetail: React.FC = () => {
           </p>
           <p>{product.quantity}</p>
           <div className="btn-values">
-            <button className="btn-buy" onClick={handleFinishedPurchase}>
+            <button
+              className="btn-buy"
+              onClick={() => navigate("/checkout-success")}
+            >
               Buy
             </button>
             <button
