@@ -7,6 +7,7 @@ const CheckoutSuccess: React.FC = () => {
   const orderNumber = Math.floor(Math.random() * 100000);
   const location = useLocation();
   const items: Product[] = location.state?.items || [];
+
   return (
     <Simplelayout>
       <section className="checkout-success">
@@ -14,29 +15,29 @@ const CheckoutSuccess: React.FC = () => {
         <p className="order-number">Order number: #{orderNumber}</p>
         <div className="checkout-detail">
           <p className="checkout-title">Items purchased:</p>
-
           <div className="checkout-header">
             <span>ITEM</span>
             <span>NAME</span>
             <span>PRICE</span>
           </div>
-
-          <ul className="checkout-list">
-            {items.map((item) => (
-              <li key={item.id}>
-                <img src={item.imageURL} className="item-product-img"/>
-                <span>{item.name} </span>
-                <span>
-                  {item.price.toLocaleString("pt-BR", {
-                    style: "currency",
-                    currency: "BRL",
-                  })}{" "}
-                </span>
-              </li>
-            ))}
-          </ul>
-
-          <p className="checkout-total">Total: </p>
+          {items.length === 0 && <p>No items to display</p>}
+          {items.length === 1 && (
+            <ul className="checkout-list">
+              {items.map((item) => (
+                <li key={item.id}>
+                  <img src={item.imageURL} className="item-product-img" />
+                  <span>{item.name} </span>
+                  <span>
+                    {item.price.toLocaleString("pt-BR", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}{" "}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {items.length > 1 && <p className="checkout-total">Total: </p>}
         </div>
       </section>
     </Simplelayout>
