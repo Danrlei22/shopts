@@ -190,7 +190,11 @@ const Cart: React.FC = () => {
               <div className="finish-cart">
                 <button
                   className="btn-finish-cart"
-                  onClick={() => navigate("/checkout-success")}
+                  onClick={() =>
+                    navigate("/checkout-success", {
+                      state: { items: cartItems },
+                    })
+                  }
                 >
                   Finish purchase
                 </button>

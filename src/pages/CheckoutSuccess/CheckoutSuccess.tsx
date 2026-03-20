@@ -49,7 +49,34 @@ const CheckoutSuccess: React.FC = () => {
               ))}
             </ul>
           )}
-          {items.length > 1 && <p className="checkout-total">Total: </p>}
+          {items.length > 1 && (
+            <>
+              <ul className="checkout-list">
+                {items.map((item) => (
+                  <li key={item.id}>
+                    <img src={item.imageURL} className="item-product-img" />
+                    <span>{item.name} </span>
+                    <span>
+                      {item.price.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}{" "}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <p className="checkout-total">
+                Total:{" "}
+                {items
+                  .reduce((sum, items) => sum + items.price, 0)
+                  .toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}
+              </p>
+            </>
+          )}
         </div>
       </section>
     </Simplelayout>
