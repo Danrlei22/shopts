@@ -7,12 +7,24 @@ const CheckoutSuccess: React.FC = () => {
   const orderNumber = Math.floor(Math.random() * 100000);
   const location = useLocation();
   const items: Product[] = location.state?.items || [];
+  const date = new Date().toLocaleDateString("pt-BR", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
 
   return (
     <Simplelayout>
       <section className="checkout-success">
         <h1>Purchase completed successfully</h1>
-        <p className="order-number">Order number: #{orderNumber}</p>
+        <div className="checkout-info">
+          <p className="order-number">Order number: #{orderNumber}</p>
+          <p className="checkout-date">{date}</p>
+        </div>
+
         <div className="checkout-detail">
           <p className="checkout-title">Items purchased:</p>
           <div className="checkout-header">

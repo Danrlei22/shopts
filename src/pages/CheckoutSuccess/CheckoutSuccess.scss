@@ -5,9 +5,19 @@
   color: #fff;
   border-radius: 3px;
   border: none;
-  .order-number {
-    font-size: 18px;
-    margin-top: 0.3em;
+  .checkout-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+    .order-number {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .checkout-date{
+      font-size: 16px;
+    }
   }
   .checkout-title {
     font-size: 20px;
@@ -25,7 +35,7 @@
     .checkout-list {
       list-style: none;
       padding: 0;
-      .item-product-img{
+      .item-product-img {
         width: 60px;
         height: 60px;
         object-fit: cover;
