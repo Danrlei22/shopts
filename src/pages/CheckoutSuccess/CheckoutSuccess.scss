@@ -17,6 +17,7 @@
     font-size: 18px;
     font-weight: bold;
     border-bottom: 1px dashed #fff;
+    padding: 0 10px;
   }
   .checkout-detail {
     margin-top: 1em;
@@ -24,11 +25,18 @@
     .checkout-list {
       list-style: none;
       padding: 0;
+      .item-product-img{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 3px;
+      }
     }
     .checkout-list li {
       display: flex;
       justify-content: space-between;
-      padding: 5px 0;
+      align-items: center;
+      padding: 5px 5px;
     }
     .checkout-list li:last-child {
       border-bottom: 1px dashed #fff;
