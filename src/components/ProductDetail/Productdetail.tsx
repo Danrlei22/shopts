@@ -57,7 +57,13 @@ const ProductDetail: React.FC = () => {
           <div className="btn-values">
             <button
               className="btn-buy"
-              onClick={() => navigate("/checkout-success")}
+              onClick={() =>
+                navigate("/checkout-success", {
+                  state: {
+                    items: [product],
+                  },
+                })
+              }
             >
               Buy
             </button>
