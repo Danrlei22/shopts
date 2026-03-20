@@ -1,8 +1,12 @@
+import { useLocation } from "react-router-dom";
 import Simplelayout from "../../components/Layout/SimpleLayout";
 import "./CheckoutSuccess.scss";
+import type { Product } from "../../types/Product";
 
 const CheckoutSuccess: React.FC = () => {
   const orderNumber = Math.floor(Math.random() * 100000);
+  const location = useLocation();
+  const items: Product[] = location.state?.items || [];
   return (
     <Simplelayout>
       <section className="checkout-success">
@@ -13,22 +17,23 @@ const CheckoutSuccess: React.FC = () => {
 
           <div className="checkout-header">
             <span>ITEM</span>
-            <span>QTS</span>
+            <span>NAME</span>
             <span>PRICE</span>
           </div>
 
           <ul className="checkout-list">
-            <li>
-              <span>Item </span>
-              <span>Qts </span>
-              <span>Price </span>
-            </li>
-
-            <li>
-              <span>Item </span>
-              <span>Qts </span>
-              <span>Price </span>
-            </li>
+            {items.map((item) => (
+              <li key={item.id}>
+                <img src={item.imageURL} className="item-product-img"/>
+                <span>{item.name} </span>
+                <span>
+                  {item.price.toLocaleString("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  })}{" "}
+                </span>
+              </li>
+            ))}
           </ul>
 
           <p className="checkout-total">Total: </p>

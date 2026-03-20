@@ -45,7 +45,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="product-btn">
         <button
           className="btn-buy"
-          onClick={() => navigate("/checkout-success")}
+          onClick={() =>
+            navigate("/checkout-success", {
+              state: {
+                items: [product],
+              },
+            })
+          }
         >
           Buy
         </button>
