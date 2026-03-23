@@ -2,6 +2,10 @@ import { useLocation } from "react-router-dom";
 import Simplelayout from "../../components/Layout/SimpleLayout";
 import "./CheckoutSuccess.scss";
 import type { Product } from "../../types/Product";
+import { cleanCart } from "../../store/slices/cartSlice";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../../store";
 
 const CheckoutSuccess: React.FC = () => {
   const orderNumber = Math.floor(Math.random() * 100000);
@@ -14,6 +18,12 @@ const CheckoutSuccess: React.FC = () => {
     day: "2-digit",
     month: "short",
     year: "numeric",
+  });
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(cleanCart());
   });
 
   return (
