@@ -10,6 +10,7 @@ import { fetchProducts } from "../src/store/slices/productsSlice";
 import { useAppDispatch } from "./store";
 import { ToastContainer } from "react-toastify";
 import CheckoutSuccess from "./pages/CheckoutSuccess/CheckoutSuccess";
+import CategoryProducts from "./pages/CategoryProducts/CategoryProducts";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/termofuse" element={<TermsOfUse />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/checkout-success" element={<CheckoutSuccess />} />
+        <Route path="/category/:id" element={<CategoryProducts />} />
       </Routes>
       <ToastContainer position="bottom-center" autoClose={5000} />
     </BrowserRouter>

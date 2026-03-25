@@ -6,38 +6,45 @@ import bannerKitchen from "../../assets/images/Offer3.png";
 import bannerSmartwatch from "../../assets/images/Offer4.png";
 import bannerFone from "../../assets/images/Offer5.png";
 import { useEffect, useRef, useState } from "react";
-
-const banners = [
-  {
-    id: 1,
-    src: bannerWelcome,
-    alt: "Welcome ShopTS",
-  },
-  {
-    id: 2,
-    src: bannerDelivery,
-    alt: "Free Delivery",
-  },
-  {
-    id: 3,
-    src: bannerKitchen,
-    alt: "Kitchen Appliances",
-  },
-  {
-    id: 4,
-    src: bannerSmartwatch,
-    alt: "Smatwatch Deals",
-  },
-  {
-    id: 5,
-    src: bannerFone,
-    alt: "Smartphone offers",
-  },
-];
+import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const timerRef = useRef<number | undefined>(undefined);
+  const navigate = useNavigate();
+
+  const banners = [
+    {
+      id: 1,
+      src: bannerWelcome,
+      alt: "Welcome ShopTS",
+      categoryId: null,
+    },
+    {
+      id: 2,
+      src: bannerDelivery,
+      alt: "Free Delivery",
+      categoryId: null,
+    },
+    {
+      id: 3,
+      src: bannerKitchen,
+      alt: "Kitchen Appliances",
+      categoryId: 7,
+    },
+    {
+      id: 4,
+      src: bannerSmartwatch,
+      alt: "Smatwatch Deals",
+      categoryId: null,
+    },
+    {
+      id: 5,
+      src: bannerFone,
+      alt: "Smartphone offers",
+      categoryId: null,
+    },
+  ];
 
   useEffect(() => {
     timerRef.current = startAutoplay(5000);
@@ -92,7 +99,20 @@ const Header: React.FC = () => {
       </div>
 
       <div className="header-poster">
-        <img src={banners[currentBannerIndex].src} />
+        <span
+          onClick={() => {
+            if (banners[currentBannerIndex].categoryId !== null)
+              navigate(`/category/${banners[currentBannerIndex].categoryId}`);
+          }}
+          style={
+            banners[currentBannerIndex].categoryId !== null
+              ? { cursor: "pointer" }
+              : {}
+          }
+        >
+          <img src={banners[currentBannerIndex].src} />
+        </span>
+
         <div className="carousel-indicators">
           {banners.map((banner, index) => (
             <span
