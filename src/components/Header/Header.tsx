@@ -5,7 +5,7 @@ import bannerDelivery from "../../assets/images/Offer2.png";
 import bannerKitchen from "../../assets/images/Offer3.png";
 import bannerSmartwatch from "../../assets/images/Offer4.png";
 import bannerFone from "../../assets/images/Offer5.png";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store";
 import { setActiveCategory } from "../../store/slices/activeCategoryId";
@@ -55,33 +55,33 @@ const Header: React.FC = () => {
     },
   ];
 
-  useEffect(() => {
-    timerRef.current = startAutoplay(5000);
-    return () => {
-      clearAutoplay();
-    };
-  }, []);
-
-  const startAutoplay = (interval: number): number | undefined => {
+  const startAutoplay = useCallback(() => {
     const timerId = setInterval(() => {
       setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, interval);
+    }, 5000);
 
     return timerId as number;
-  };
+  }, [banners.length]);
 
-  const clearAutoplay = () => {
+  const clearAutoplay = useCallback(() => {
     if (timerRef.current !== undefined) {
       clearInterval(timerRef.current);
       timerRef.current = undefined;
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    timerRef.current = startAutoplay();
+    return () => {
+      clearAutoplay();
+    };
+  }, [startAutoplay, clearAutoplay]);
 
   const handleNextBanner = () => {
     const newCurrent = (currentBannerIndex + 1) % banners.length;
     setCurrentBannerIndex(newCurrent);
     clearAutoplay();
-    timerRef.current = startAutoplay(5000);
+    timerRef.current = startAutoplay();
   };
 
   const handlePrevBanner = () => {
@@ -89,14 +89,14 @@ const Header: React.FC = () => {
       (currentBannerIndex - 1 + banners.length) % banners.length;
     setCurrentBannerIndex(newCurrent);
     clearAutoplay();
-    timerRef.current = startAutoplay(5000);
+    timerRef.current = startAutoplay();
   };
 
   const handleDotClick = (index: number) => {
     setCurrentBannerIndex(index);
 
     clearAutoplay();
-    timerRef.current = startAutoplay(5000);
+    timerRef.current = startAutoplay();
   };
 
   return (
