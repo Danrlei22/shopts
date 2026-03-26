@@ -6,12 +6,14 @@ import bannerKitchen from "../../assets/images/Offer3.png";
 import bannerSmartwatch from "../../assets/images/Offer4.png";
 import bannerFone from "../../assets/images/Offer5.png";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../../store";
+import { setActiveCategory } from "../../store/slices/activeCategoryId";
 
 const Header: React.FC = () => {
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
   const timerRef = useRef<number | undefined>(undefined);
-  const navigate = useNavigate();
+  const dispatch = useDispatch<AppDispatch>();
 
   const banners = [
     {
@@ -102,7 +104,9 @@ const Header: React.FC = () => {
         <span
           onClick={() => {
             if (banners[currentBannerIndex].categoryId !== null)
-              navigate(`/category/${banners[currentBannerIndex].categoryId}`);
+              dispatch(
+                setActiveCategory(banners[currentBannerIndex].categoryId),
+              );
           }}
           style={
             banners[currentBannerIndex].categoryId !== null
