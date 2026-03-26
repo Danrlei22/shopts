@@ -93,7 +93,7 @@ const ProductGrid: React.FC = () => {
   }
 
   return (
-    <section className="section-container" ref={gridRef}>
+    <section className="section-container" ref={gridRef} id="gridContainer">
       <h2>Offers of the day</h2>
 
       <div className="container">

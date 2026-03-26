@@ -15,6 +15,13 @@ const Header: React.FC = () => {
   const timerRef = useRef<number | undefined>(undefined);
   const dispatch = useDispatch<AppDispatch>();
 
+  const scrollToGrid = () => {
+    const gridElement = document.getElementById("gridContainer");
+    if (gridElement) {
+      gridElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const banners = [
     {
       id: 1,
@@ -107,6 +114,7 @@ const Header: React.FC = () => {
               dispatch(
                 setActiveCategory(banners[currentBannerIndex].categoryId),
               );
+            scrollToGrid();
           }}
           style={
             banners[currentBannerIndex].categoryId !== null
