@@ -1,8 +1,12 @@
-# 🛍️ ShopTS
+# 🛍️ ShopTS — E-commerce com React + TypeScript
 
-Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, focada em oferecer uma experiência fluida, acessível e interativa ao usuário.
+Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, oferecendo uma experiência de compra fluida, interativa e otimizada para diferentes dispositivos.
 
-## 🔗 Links do Projeto
+## 📸 Preview
+
+![Preview](./preview.png)
+
+## 🔗 Link do Projeto
 
 🌐 [Netlify](https://shopts.netlify.app/)
 
@@ -12,9 +16,13 @@ Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, focad
 - [TypeScript](https://www.typescriptlang.org/) - Superset do JavaScript com tipagem estática para maior segurança e previsibilidade no código.
 - [Vite](https://vitejs.dev/) - Ferramenta de build rápida e moderna para projetos front-end.
 - [Sass/SCSS](https://sass-lang.com/) - Pré-processador CSS utilizado para modularizar e organizar estilos.
-- [React-Router](https://reactrouter.com/) - Controle de rotas e navegação entre páginas.
+- [React Router](https://reactrouter.com/) - Controle de rotas e navegação entre páginas.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - Gerenciamento de estado global moderno e simplificado.
+- [React Hooks](https://react.dev/reference/react/hooks) - Gerenciamento de estado e efeitos colaterais.
 - [JSON-Server](https://github.com/typicode/json-server) - Backend simulado para mockar produtos e categorias.
 - [Netlify](https://www.netlify.com/) - Hospedagem e deploy contínuo do front-end.
+- [React Toastify](https://fkhadra.github.io/react-toastify/) - Biblioteca para exibição de notificações (toast) e feedback visual ao usuário.
+  
 
 ## 💡 Funcionalidades
 
@@ -23,6 +31,15 @@ Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, focad
 - 🔍 Filtro e organização por categorias
 - 📱 Layout totalmente responsivo
 - ⚙️ Estrutura modular e escalável
+
+
+## ⭐ Diferenciais
+
+- ⚡ Alta performance com Vite
+- 🧠 Gerenciamento de estado com Redux Toolkit
+- 🎯 Navegação fluida sem reload (SPA)
+- 🎨 Estilização modular com SCSS
+  
 
 ## 📦 Instalação
 
