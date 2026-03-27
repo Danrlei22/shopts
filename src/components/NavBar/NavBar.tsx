@@ -15,7 +15,6 @@ const NavBar: React.FC = () => {
   const searchTerm = useSelector(
     (state: RootState) => state.searchFilter.searchByProducts
   );
-  
 
   const dispatch = useDispatch<AppDispatch>();
 
@@ -29,10 +28,14 @@ const NavBar: React.FC = () => {
     dispatch(setPage(1));
   };
 
+  const handleClearActiveCategory = () => {
+    dispatch(clearActiveCategory());
+  }
+
   return (
     <nav className="nav-bar">
       <div>
-        <Link to="/">
+        <Link to="/" onClick={() =>handleClearActiveCategory()}>
           <img src={marcaTS} alt="Marca ShopTS" />
         </Link>
       </div>
