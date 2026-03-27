@@ -4,7 +4,7 @@ Loja virtual moderna e responsiva desenvolvida com **React + TypeScript**, ofere
 
 ## 📸 Preview
 
-![Preview](./preview.png)
+![Preview](./src/assets/preview.PNG)
 
 ## 🔗 Link do Projeto
 
