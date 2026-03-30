@@ -6,7 +6,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import { useEffect } from "react";
-import { fetchProducts } from "../src/store/slices/productsSlice";
+import { fetchProducts } from "./store/slices/productsSlice";
 import { useAppDispatch } from "./store";
 import { ToastContainer } from "react-toastify";
 import CheckoutSuccess from "./pages/CheckoutSuccess/CheckoutSuccess";
