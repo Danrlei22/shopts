@@ -7,7 +7,7 @@ import { test, expect } from "vitest";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 
-test("render input search", async () => {
+const renderNavBar = () => {
   render(
     <Provider store={store}>
       <BrowserRouter>
@@ -15,11 +15,20 @@ test("render input search", async () => {
       </BrowserRouter>
     </Provider>,
   );
+};
+
+test("render input search", () => {
+  renderNavBar();
+
+  expect(screen.getByPlaceholderText("Search")).toBeInTheDocument();
+});
+
+
+test("render search digit", async () => {
+  renderNavBar();
 
   const input = screen.getByPlaceholderText("Search");
-
   await userEvent.type(input, "nike");
 
-  //expect(input).toBeInTheDocument();
   expect(input).toHaveValue("nike");
-});
+})
