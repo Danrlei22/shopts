@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
           value={searchTerm}
           onChange={(e) => dispatch(setSearchFilter(e.target.value))}
         />
-        <button type="submit" className="search-button">
+        <button type="submit" className="search-button" aria-label="search">
           <FaMagnifyingGlass className="search-icon" />
         </button>
       </form>

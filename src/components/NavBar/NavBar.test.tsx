@@ -17,12 +17,11 @@ const renderNavBar = () => {
   );
 };
 
-test("render input search", () => {
+test("render search input", () => {
   renderNavBar();
 
   expect(screen.getByPlaceholderText("Search")).toBeInTheDocument();
 });
-
 
 test("render search digit", async () => {
   renderNavBar();
@@ -31,4 +30,4 @@ test("render search digit", async () => {
   await userEvent.type(input, "nike");
 
   expect(input).toHaveValue("nike");
-})
+});
