@@ -7,7 +7,12 @@ const SimpleNavBar: React.FC = () => {
   const navigate = useNavigate();
   return (
     <nav className="simple-navbar">
-      <button className="btn-back" type="button" onClick={() => navigate(-1)}>
+      <button
+        className="btn-back"
+        type="button"
+        onClick={() => navigate(-1)}
+        aria-label="arrow-back"
+      >
         <IoArrowUndoOutline className="simple-navbar-icon" />
       </button>
       <Link to="/">
