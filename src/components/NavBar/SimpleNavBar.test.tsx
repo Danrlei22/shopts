@@ -34,3 +34,11 @@ test("return to the previous page by clicking the button", async () => {
   expect(mockNavigate).toHaveBeenCalledWith(-1);
 });
 
+test("nagivate to the home page when clicking the logo", () => {
+  renderSimpleNavBar();
+
+  const link = screen.getByRole("link", { name: /marca shopts/i });
+
+  expect(link).toHaveAttribute("href", "/");
+});
+
