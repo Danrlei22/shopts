@@ -60,7 +60,7 @@ const Cart: React.FC = () => {
   return (
     <div className="cart-container">
       <button type="button" className="cart-button" onClick={toggleCartClick}>
-        <BsCart className="cart-icon" />
+        <BsCart className="cart-icon" aria-label="cart"/>
         {cartItems.length > 0 && (
           <span className="cart-quantity">{cartItems.length}</span>
         )}
