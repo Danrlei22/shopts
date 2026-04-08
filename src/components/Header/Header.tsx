@@ -152,7 +152,7 @@ const Header: React.FC = () => {
       </div>
 
       <div className="header-arrowF">
-        <button className="btn-arrow" onClick={handleNextBanner}>
+        <button className="btn-arrow" onClick={handleNextBanner} aria-label="btn-next">
           <MdArrowForwardIos className="arrow-icon" />
         </button>
       </div>
