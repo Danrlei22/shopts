@@ -134,7 +134,10 @@ const Header: React.FC = () => {
               : {}
           }
         >
-          <img src={banners[currentBannerIndex].src} />
+          <img
+            src={banners[currentBannerIndex].src}
+            alt={banners[currentBannerIndex].alt}
+          />
         </span>
 
         <div className="carousel-indicators">
