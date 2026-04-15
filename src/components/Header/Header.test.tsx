@@ -33,7 +33,6 @@ test("Navigates to previous banner on prev button click", async () => {
 
 test("Navigates to next banner on next button click", async () => {
   renderHeader();
-  screen.debug();
 
   const nextButton = screen.getByRole("button", { name: /btn-next/i });
 

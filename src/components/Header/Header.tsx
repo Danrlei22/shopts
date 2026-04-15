@@ -110,13 +110,18 @@ const Header: React.FC = () => {
   return (
     <header>
       <div className="header-arrowB">
-        <button className="btn-arrow" onClick={handlePrevBanner} aria-label="btn-prev">
+        <button
+          className="btn-arrow"
+          onClick={handlePrevBanner}
+          aria-label="btn-prev"
+        >
           <MdArrowBackIosNew className="arrow-icon" />
         </button>
       </div>
 
       <div className="header-poster">
-        <span
+        <button
+          aria-label="selected-banner"
           onClick={() => {
             if (banners[currentBannerIndex].categoryId !== null)
               dispatch(
@@ -138,7 +143,7 @@ const Header: React.FC = () => {
             src={banners[currentBannerIndex].src}
             alt={banners[currentBannerIndex].alt}
           />
-        </span>
+        </button>
 
         <div className="carousel-indicators">
           {banners.map((banner, index) => (
@@ -146,13 +151,18 @@ const Header: React.FC = () => {
               key={banner.id}
               className={index === currentBannerIndex ? "active" : ""}
               onClick={() => handleDotClick(index)}
+              aria-label={"index-banner-" + index}
             ></span>
           ))}
         </div>
       </div>
 
       <div className="header-arrowF">
-        <button className="btn-arrow" onClick={handleNextBanner} aria-label="btn-next">
+        <button
+          className="btn-arrow"
+          onClick={handleNextBanner}
+          aria-label="btn-next"
+        >
           <MdArrowForwardIos className="arrow-icon" />
         </button>
       </div>
