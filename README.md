@@ -49,6 +49,9 @@ npm install
 
 # Rodar o projeto
 npm run dev
+
+# Ver os test 
+npx vitest --ui
 ```
 
 ## 🎯 Objetivo
