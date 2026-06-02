@@ -50,8 +50,11 @@ npm install
 # Rodar o projeto
 npm run dev
 
-# Ver os test 
+# Testes com vitest 
 npx vitest --ui
+
+# Testes com cypress
+npx cypress open
 ```
 
 ## 🎯 Objetivo
